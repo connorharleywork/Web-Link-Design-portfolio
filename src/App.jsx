@@ -9,6 +9,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import FloatingActions from './components/FloatingActions';
 
 export default function App() {
   return (
@@ -25,7 +26,7 @@ export default function App() {
         <Contact />
         <FAQ />
       </main>
-      <a href="#contact" className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2 rounded-full bg-[#d8b56d] px-6 py-3 text-sm font-semibold text-[#17130b] shadow-2xl md:hidden">Start Your Website</a>
+      <FloatingActions />
       <Footer />
     </>
   );
