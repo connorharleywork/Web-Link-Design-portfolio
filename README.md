@@ -1,14 +1,14 @@
 # Web Link Designs Portfolio
 
-A luxury, high-end React + Vite + Tailwind CSS portfolio website for **Web Link Designs**. The site is designed for Netlify deployment and includes polished responsive layouts, animated premium UI details, editable content data, Netlify Forms support, form validation, and placeholder analytics guidance.
+A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
 
-## 1. Install dependencies
+## Install dependencies
 
 ```bash
 npm install
 ```
 
-## 2. Run locally
+## Run locally
 
 ```bash
 npm run dev
@@ -16,15 +16,15 @@ npm run dev
 
 Open the local URL shown by Vite, usually `http://localhost:5173`.
 
-## 3. Build for production
+## Build for production
 
 ```bash
 npm run build
 ```
 
-The production files will be created in `dist/`.
+The production files are generated in `dist/`.
 
-## 4. Deploy to Netlify
+## Deploy to Netlify
 
 This project includes `netlify.toml`:
 
@@ -41,39 +41,43 @@ On Netlify:
 3. Confirm the publish directory is `dist`.
 4. Deploy.
 
-## 5. Edit website options and portfolio items
+## Edit the website content
 
-Most editable website content is stored in:
+Most editable content is stored in:
 
 ```text
 src/data/siteContent.js
 ```
 
-Edit this file to update:
+Update this file to change:
 
-- Website options
+- Brand text and CTA labels
+- Website options and add-ons
 - Services
-- Packages
+- Packages and package descriptions
+- Process steps
 - Portfolio/demo projects
+- Benefits and trust badges
 - FAQs
 - Contact details
 - Navigation labels
 
-For example, to add a portfolio project, add another object to the `portfolioItems` array.
+## Premium UI and conversion features
 
-## 6. Premium UI features
+The polish pass includes:
 
-The latest polish pass adds:
+- More premium hero copy and a smoother animated preview card.
+- Slightly more transparent glass morphism with glow, grid and subtle noise details.
+- Scroll reveal animations using a reusable `Reveal` component.
+- Improved cards, buttons, package blocks, portfolio-style mockups and hover states.
+- Mobile-friendly navigation, tap targets and a mobile floating **Start a Project** CTA.
+- Scroll progress indicator and back-to-top button.
+- CTA buttons after major sections.
+- Website option and package buttons that pass the selected option into the contact form.
+- Trust badges and reassurance copy near the form.
+- Responsive layouts intended for 375px, 768px, 1024px, 1440px and 1920px widths.
 
-- Mobile-only floating **Start a Project** CTA.
-- Scroll progress bar at the top of the page.
-- Back-to-top button after the visitor scrolls.
-- Subtle animated background glow with reduced-motion support.
-- More detailed placeholder project and website-option mockups.
-- Larger mobile tap targets and cleaner stacked card layouts.
-- Contact form validation messages and a thank-you success state.
-
-## 7. Set up Netlify Forms
+## Netlify Forms
 
 The contact form is configured for Netlify Forms:
 
@@ -89,7 +93,7 @@ After deploying to Netlify:
 
 No backend is required.
 
-## 8. Add analytics later
+## Analytics placeholder
 
 An analytics placeholder comment is included in `index.html` inside the `<head>` tag:
 
@@ -97,13 +101,12 @@ An analytics placeholder comment is included in `index.html` inside the `<head>`
 <!-- Analytics placeholder: paste your Google Analytics, Plausible, or other tracking script here. -->
 ```
 
-Paste your Google Analytics, Plausible, or other analytics snippet there when you are ready. Do not commit real tracking IDs if the repository is public and you want to keep them private.
+Paste your analytics snippet there when ready. Do not commit private tracking IDs if the repository is public.
 
-## Suggested improvements
+## Suggested next improvements
 
-- Replace placeholder portfolio mockups with optimized screenshots of real client concepts.
-- Add real brand assets once the Web Link Designs visual identity is final.
-- Connect a booking tool for discovery calls.
-- Add a CMS later if frequent non-technical content editing becomes important.
-- Add image compression and real `og:image` metadata before public launch.
-- Consider adding lightweight end-to-end checks for mobile overflow and contact form validation.
+- Replace placeholder portfolio mockups with optimized screenshots or live case studies.
+- Add real client testimonials and measurable results as soon as they are available.
+- Add a discovery-call booking link for visitors who prefer scheduling immediately.
+- Add optimized Open Graph imagery before public launch.
+- Consider a CMS later if frequent content editing becomes important.

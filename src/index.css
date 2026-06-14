@@ -64,10 +64,10 @@ img, svg { max-width: 100%; }
 }
 
 .glass {
-  background: linear-gradient(145deg, rgba(18, 16, 13, .82), rgba(18, 16, 13, .62));
+  background: linear-gradient(145deg, rgba(18, 16, 13, .74), rgba(18, 16, 13, .54));
   border: 1px solid rgba(247,240,223,.13);
   box-shadow: 0 24px 80px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(20px);
 }
 .gold-text { background: linear-gradient(135deg,#fff6dd,#d8b56d 45%,#8f6a2f); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .luxury-card {
@@ -81,3 +81,13 @@ img, svg { max-width: 100%; }
 .input-luxury { width: 100%; border-radius: 1.25rem; border: 1px solid rgba(255,255,255,.1); background: rgba(17,16,13,.82); padding: 1rem; color: #fff6dd; outline: none; transition: border-color .25s ease, box-shadow .25s ease, background .25s ease; }
 .input-luxury:focus { border-color: rgba(216,181,109,.75); box-shadow: 0 0 0 4px rgba(216,181,109,.12); background: rgba(20,18,14,.95); }
 .input-luxury::placeholder { color: rgba(201,192,173,.55); }
+
+
+.premium-button { position: relative; overflow: hidden; }
+.premium-button::after { content: ""; position: absolute; inset: 0; transform: translateX(-120%) skewX(-18deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent); transition: transform .7s ease; }
+.premium-button:hover::after { transform: translateX(120%) skewX(-18deg); }
+.soft-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(216,181,109,.34), transparent); }
+.noise-overlay { position: absolute; inset: 0; pointer-events: none; opacity: .13; background-image: radial-gradient(rgba(255,255,255,.45) .6px, transparent .6px); background-size: 4px 4px; mix-blend-mode: overlay; }
+@keyframes premiumFloat { 0%,100% { transform: translate3d(0,0,0) rotate(0deg); } 50% { transform: translate3d(0,-10px,0) rotate(.35deg); } }
+.premium-float { animation: premiumFloat 7.5s ease-in-out infinite; will-change: transform; }
+@media (max-width: 767px) { main { padding-bottom: 4.75rem; } }
