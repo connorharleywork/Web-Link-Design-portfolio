@@ -89,5 +89,6 @@ img, svg { max-width: 100%; }
 .soft-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(216,181,109,.34), transparent); }
 .noise-overlay { position: absolute; inset: 0; pointer-events: none; opacity: .13; background-image: radial-gradient(rgba(255,255,255,.45) .6px, transparent .6px); background-size: 4px 4px; mix-blend-mode: overlay; }
 @keyframes premiumFloat { 0%,100% { transform: translate3d(0,0,0) rotate(0deg); } 50% { transform: translate3d(0,-10px,0) rotate(.35deg); } }
-.premium-float { animation: premiumFloat 4.8s ease-in-out infinite; will-change: transform; }
+.premium-float { transform: translate3d(0,0,0); }
+.premium-float.is-floating { animation: premiumFloat 4.8s ease-in-out infinite; will-change: transform; }
 @media (max-width: 767px) { main { padding-bottom: 4.75rem; } }
