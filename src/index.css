@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0b0a08; color: #f7f0df; scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: radial-gradient(circle at 20% 0%, rgba(216,181,109,.16), transparent 32rem), #0b0a08; }
+button, input, textarea, select { font: inherit; }
+::selection { background: rgba(216,181,109,.35); }
+.glass { background: rgba(18, 16, 13, .72); border: 1px solid rgba(247,240,223,.12); box-shadow: 0 24px 80px rgba(0,0,0,.35); backdrop-filter: blur(18px); }
+.gold-text { background: linear-gradient(135deg,#fff6dd,#d8b56d 45%,#8f6a2f); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.luxury-card { border: 1px solid rgba(247,240,223,.12); background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025)); box-shadow: 0 22px 70px rgba(0,0,0,.28); }
+.mesh { background-image: radial-gradient(circle at 20% 30%, rgba(216,181,109,.18), transparent 25rem), radial-gradient(circle at 85% 10%, rgba(245,232,198,.1), transparent 22rem), linear-gradient(180deg, rgba(255,255,255,.04), transparent); }
