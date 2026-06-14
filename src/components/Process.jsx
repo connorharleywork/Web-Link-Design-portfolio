@@ -1,0 +1,3 @@
+import { processSteps } from '../data/siteContent';
+import SectionHeader from './SectionHeader';
+export default function Process(){return <section id="process" className="bg-white/[.025] px-5 py-24"><div className="mx-auto max-w-6xl"><SectionHeader eyebrow="Process" title="A clear, calm path from idea to launch."/><div className="grid gap-4 md:grid-cols-5">{processSteps.map((s,i)=><div className="glass rounded-3xl p-5 text-center" key={s}><span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#d8b56d] font-bold text-[#17130b]">{i+1}</span><h3 className="mt-5 font-semibold text-[#fff6dd]">{s}</h3></div>)}</div></div></section>}
