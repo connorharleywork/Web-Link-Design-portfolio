@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WebsiteOptions from './components/WebsiteOptions';
@@ -10,8 +11,15 @@ import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import GuesthouseConcept from './pages/GuesthouseConcept';
 
 export default function App() {
+  const [activeConcept, setActiveConcept] = useState(null);
+
+  if (activeConcept === 'guesthouse') {
+    return <GuesthouseConcept onBack={() => setActiveConcept(null)} />;
+  }
+
   return (
     <>
       <Navbar />
@@ -21,7 +29,7 @@ export default function App() {
         <Services />
         <Packages />
         <Process />
-        <Portfolio />
+        <Portfolio onOpenConcept={setActiveConcept} />
         <WhyChooseUs />
         <Contact />
         <FAQ />

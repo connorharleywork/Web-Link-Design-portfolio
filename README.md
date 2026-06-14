@@ -61,6 +61,23 @@ Update this file to change:
 - FAQs
 - Contact details
 - Navigation labels
+- Azure Tide Guesthouse demo content in the `guesthouseConcept` object
+
+### Edit the Azure Tide Guesthouse concept
+
+The first full demo concept lives in:
+
+```text
+src/pages/GuesthouseConcept.jsx
+```
+
+Most guesthouse text, room details, amenities, FAQs, policies, reviews and image URLs are editable in the `guesthouseConcept` export inside:
+
+```text
+src/data/siteContent.js
+```
+
+To change the concept later, update the data object first. Use `GuesthouseConcept.jsx` only when changing layout, interactions, lightbox behaviour, room modal behaviour or the enquiry handoff. The concept uses free Unsplash image URLs and should stay demo-safe unless replaced with client-owned or commercial-use imagery.
 
 ## Premium UI and conversion features
 
