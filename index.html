@@ -10,9 +10,11 @@
     <!-- Analytics placeholder: paste your Google Analytics, Plausible, or other tracking script here. -->
   </head>
   <body>
-    <form name="website-enquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form name="project-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="project-enquiry" />
+      <input type="text" name="bot-field" />
       <input type="text" name="name" />
-      <input type="text" name="businessName" />
+      <input type="text" name="business" />
       <input type="email" name="email" />
       <input type="tel" name="phone" />
       <input type="text" name="websiteType" />

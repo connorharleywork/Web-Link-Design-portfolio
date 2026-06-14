@@ -79,19 +79,34 @@ The polish pass includes:
 
 ## Netlify Forms
 
-The contact form is configured for Netlify Forms:
+The contact form is configured for Netlify Forms without a backend, Firebase, Supabase, or any database:
 
 - A hidden static form is included in `index.html` so Netlify can detect it during deployment.
-- The React contact form in `src/components/Contact.jsx` posts to Netlify using the same form name: `website-enquiry`.
+- The React contact form in `src/components/Contact.jsx` posts URL-encoded data to Netlify using the same form name: `project-enquiry`.
+- The form fields are `name`, `business`, `email`, `phone`, `websiteType`, `budget`, and `message`.
+- A `bot-field` honeypot is included to reduce spam submissions.
 
 After deploying to Netlify:
 
 1. Submit a test enquiry on the live site.
 2. Open your Netlify dashboard.
 3. Go to **Forms**.
-4. Confirm submissions appear under `website-enquiry`.
+4. Confirm submissions appear under `project-enquiry`.
 
-No backend is required.
+### Set up Netlify email notifications
+
+1. Open the site in your Netlify dashboard.
+2. Select **Forms** in the left navigation.
+3. Select the `project-enquiry` form.
+4. Select **Form notifications**.
+5. Choose **Add notification**.
+6. Choose **Email notification**.
+7. Enter the email address that should receive new enquiry alerts.
+8. Keep the event set to new form submissions for `project-enquiry`.
+9. Save the notification.
+10. Submit another test enquiry on the live site and confirm the notification email arrives.
+
+Tip: if notifications do not arrive, check the recipient spam folder first, then confirm the notification is attached to `project-enquiry` and not another form.
 
 ## Analytics placeholder
 
