@@ -1,13 +1,32 @@
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Star } from 'lucide-react';
 
 const badges = ['Mobile-first', 'Fast-loading', 'Built for enquiries', 'Custom design'];
 const panels = ['Strategy', 'Design', 'Launch'];
 
 export default function Hero() {
+  const previewRef = useRef(null);
+  const isPreviewInView = useInView(previewRef, { amount: 0.55, margin: '-10% 0px -10% 0px' });
+  const [isHoveringPreview, setIsHoveringPreview] = useState(false);
+  const [isTouchLikeDevice, setIsTouchLikeDevice] = useState(false);
+
+  useEffect(() => {
+    const touchQuery = window.matchMedia('(hover: none), (pointer: coarse)');
+    const updateTouchState = () => setIsTouchLikeDevice(touchQuery.matches);
+
+    updateTouchState();
+    touchQuery.addEventListener('change', updateTouchState);
+
+    return () => touchQuery.removeEventListener('change', updateTouchState);
+  }, []);
+
+  const shouldFloatPreview = isHoveringPreview || (isTouchLikeDevice && isPreviewInView);
+
   return (
     <section id="home" className="mesh relative overflow-hidden px-4 pb-20 pt-32 sm:px-5 md:pt-40 lg:min-h-screen lg:pb-28">
-      <div className="noise-overlay" /><div className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-[#d8b56d]/10 blur-3xl md:h-96 md:w-96" />
+      <div className="noise-overlay" />
+      <div className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-[#d8b56d]/10 blur-3xl md:h-96 md:w-96" />
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-14">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .75 }}>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[.28em] text-[#d8b56d] sm:text-sm sm:tracking-[.32em]">Web Link Designs</p>
@@ -22,7 +41,12 @@ export default function Hero() {
 
         <motion.div initial={{ opacity: 0, scale: .94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: .8, delay: .15 }} className="relative mx-auto w-full max-w-[620px]">
           <div className="absolute -inset-6 rounded-full bg-[#d8b56d]/10 blur-3xl" />
-          <div className="glass premium-float relative overflow-hidden rounded-[1.75rem] p-3 sm:rounded-[2.25rem] sm:p-4">
+          <div
+            ref={previewRef}
+            onMouseEnter={() => setIsHoveringPreview(true)}
+            onMouseLeave={() => setIsHoveringPreview(false)}
+            className={`glass premium-float relative overflow-hidden rounded-[1.75rem] p-3 sm:rounded-[2.25rem] sm:p-4 ${shouldFloatPreview ? 'is-floating' : ''}`}
+          >
             <div className="rounded-[1.35rem] border border-white/10 bg-[#11100d] p-3 sm:rounded-[1.75rem] sm:p-5">
               <div className="mb-4 flex items-center justify-between gap-4">
                 <div className="flex gap-2"><i className="h-3 w-3 rounded-full bg-[#d8b56d]" /><i className="h-3 w-3 rounded-full bg-[#8f6a2f]" /><i className="h-3 w-3 rounded-full bg-white/25" /></div>
@@ -34,7 +58,7 @@ export default function Hero() {
                   <h3 className="mt-16 text-3xl font-semibold sm:mt-24 sm:text-4xl">Business Website</h3>
                   <div className="mt-5 grid grid-cols-3 gap-2 text-center text-xs font-bold"><span className="rounded-2xl bg-black/10 p-2">SEO</span><span className="rounded-2xl bg-black/10 p-2">Forms</span><span className="rounded-2xl bg-black/10 p-2">Mobile</span></div>
                 </div>
-                <div className="space-y-3 sm:space-y-4">{panels.map((panel, index) => <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 6.5, ease: "easeInOut", delay: index * .55, repeat: Infinity }} key={panel} className="rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5"><ArrowRight className="mb-3 text-[#d8b56d]" /><p className="font-semibold text-[#fff6dd]">{panel}</p><p className="text-sm leading-6 text-[#b9af9b]">Luxury detail and clean conversion paths.</p></motion.div>)}</div>
+                <div className="space-y-3 sm:space-y-4">{panels.map((panel, index) => <motion.div animate={shouldFloatPreview ? { y: [0, -8, 0] } : { y: 0 }} transition={{ duration: 6.5, ease: 'easeInOut', delay: shouldFloatPreview ? index * .55 : 0, repeat: shouldFloatPreview ? Infinity : 0 }} key={panel} className="rounded-3xl border border-white/10 bg-white/5 p-4 sm:p-5"><ArrowRight className="mb-3 text-[#d8b56d]" /><p className="font-semibold text-[#fff6dd]">{panel}</p><p className="text-sm leading-6 text-[#b9af9b]">Luxury detail and clean conversion paths.</p></motion.div>)}</div>
               </div>
             </div>
           </div>
