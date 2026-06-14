@@ -1,6 +1,6 @@
 # Web Link Designs Portfolio
 
-A luxury, high-end React + Vite + Tailwind CSS portfolio website for **Web Link Designs**. The site is designed for Netlify deployment and includes responsive sections, editable content data, Netlify Forms support, and placeholder analytics guidance.
+A luxury, high-end React + Vite + Tailwind CSS portfolio website for **Web Link Designs**. The site is designed for Netlify deployment and includes polished responsive layouts, animated premium UI details, editable content data, Netlify Forms support, form validation, and placeholder analytics guidance.
 
 ## 1. Install dependencies
 
@@ -61,7 +61,19 @@ Edit this file to update:
 
 For example, to add a portfolio project, add another object to the `portfolioItems` array.
 
-## 6. Set up Netlify Forms
+## 6. Premium UI features
+
+The latest polish pass adds:
+
+- Mobile-only floating **Start a Project** CTA.
+- Scroll progress bar at the top of the page.
+- Back-to-top button after the visitor scrolls.
+- Subtle animated background glow with reduced-motion support.
+- More detailed placeholder project and website-option mockups.
+- Larger mobile tap targets and cleaner stacked card layouts.
+- Contact form validation messages and a thank-you success state.
+
+## 7. Set up Netlify Forms
 
 The contact form is configured for Netlify Forms:
 
@@ -77,7 +89,7 @@ After deploying to Netlify:
 
 No backend is required.
 
-## 7. Add analytics later
+## 8. Add analytics later
 
 An analytics placeholder comment is included in `index.html` inside the `<head>` tag:
 
@@ -89,8 +101,9 @@ Paste your Google Analytics, Plausible, or other analytics snippet there when yo
 
 ## Suggested improvements
 
-- Replace placeholder portfolio mockups with screenshots of real client concepts.
+- Replace placeholder portfolio mockups with optimized screenshots of real client concepts.
 - Add real brand assets once the Web Link Designs visual identity is final.
 - Connect a booking tool for discovery calls.
 - Add a CMS later if frequent non-technical content editing becomes important.
 - Add image compression and real `og:image` metadata before public launch.
+- Consider adding lightweight end-to-end checks for mobile overflow and contact form validation.

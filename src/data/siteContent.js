@@ -72,7 +72,7 @@ export const faqs = [
 ];
 
 export const contact = {
-  email: 'hello@twoboysdesign.co.za',
+  email: 'hello@weblinkdesigns.co.za',
   whatsapp: '+27 XX XXX XXXX',
   location: 'Cape Town, South Africa',
 };
