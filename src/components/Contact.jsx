@@ -14,12 +14,19 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   const [errors, setErrors] = useState(initialErrors);
   const [websiteType, setWebsiteType] = useState(initialWebsiteType);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const handler = (event) => setWebsiteType(event.detail || initialWebsiteType);
 
+    const messageHandler = (event) => setMessage(event.detail || '');
+
     window.addEventListener('select-website-type', handler);
-    return () => window.removeEventListener('select-website-type', handler);
+    window.addEventListener('prefill-project-message', messageHandler);
+    return () => {
+      window.removeEventListener('select-website-type', handler);
+      window.removeEventListener('prefill-project-message', messageHandler);
+    };
   }, []);
 
   const validate = (form) => {
@@ -69,6 +76,7 @@ export default function Contact() {
       setErrors(initialErrors);
       form.reset();
       setWebsiteType(initialWebsiteType);
+      setMessage('');
     } catch (error) {
       setErrors({ form: 'Sorry, something went wrong. Please try again or contact us directly.' });
     }
@@ -166,6 +174,8 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows="5"
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
                 className="input-luxury mt-2 min-h-36 resize-y"
                 placeholder="Tell us about your business, goals and ideal launch timeline."
                 required

@@ -1,6 +1,6 @@
 // Edit this file to change the website content.
 // Website options, services, packages, portfolio items, FAQs, process steps, trust badges, and contact details live here so the site is beginner-friendly to update.
-import { Bot, CalendarCheck, ChartNoAxesCombined, Gauge, Globe2, HeartHandshake, Laptop, LineChart, MailCheck, PanelsTopLeft, Search, ShieldCheck, Smartphone, Sparkles, Wand2, Wrench } from 'lucide-react';
+import { Bot, CalendarCheck, Gauge, Globe2, HeartHandshake, LineChart, MailCheck, PanelsTopLeft, Search, ShieldCheck, Smartphone, Sparkles, Wand2, Wrench } from 'lucide-react';
 
 export const brand = {
   name: 'Web Link Designs',
@@ -54,6 +54,7 @@ export const processSteps = [
 ];
 
 export const portfolioItems = [
+  { name: 'Azure Tide Guesthouse', category: 'Guesthouse / Accommodation Website', description: 'A premium beach-inspired guesthouse website concept designed to showcase rooms, amenities, gallery, location, reviews, and direct booking enquiries.', features: ['Room showcase','Booking enquiry flow','Image gallery','Amenities section','Location and nearby attractions','Reviews and FAQs'], cta: 'View Guesthouse Concept', concept: 'guesthouse' },
   { name: 'LuxeStay Guesthouse', category: 'Hospitality', description: 'Boutique accommodation concept with room highlights and direct enquiry flow.', features: ['Room showcase','Gallery','Booking CTA'] },
   { name: 'UrbanBite Restaurant', category: 'Restaurant', description: 'Atmospheric restaurant concept with menu storytelling and reservation prompts.', features: ['Menu','Reviews','Map'] },
   { name: 'PrimeBuild Construction', category: 'Construction', description: 'Trust-led construction website concept for projects, services and quote requests.', features: ['Projects','Services','Quote form'] },
@@ -61,6 +62,72 @@ export const portfolioItems = [
   { name: 'FitForm Coaching', category: 'Fitness', description: 'Personal coaching concept focused on programmes, outcomes and consultation leads.', features: ['Programmes','Results','Lead form'] },
   { name: 'CapeLegal Advisory', category: 'Professional Services', description: 'Refined advisory concept with service clarity, credibility cues and FAQ support.', features: ['Services','Insights','Enquiry'] },
 ];
+
+
+export const guesthouseConcept = {
+  brandName: 'Azure Tide Guesthouse',
+  location: 'Bloubergstrand, Cape Town',
+  trustDetails: ['Ocean views', 'Free Wi-Fi', 'Breakfast included', '5 minutes from the beach'],
+  highlights: ['8 boutique rooms', 'Beach nearby', 'Breakfast deck', 'Secure parking', 'Airport transfers available'],
+  images: {
+    hero: { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=82', alt: 'Rolling Atlantic waves at a sandy beach during golden light' },
+    about: { src: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1400&q=82', alt: 'Elegant coastal guesthouse patio with ocean-facing seating' },
+  },
+  rooms: [
+    { name: 'Ocean View Suite', sleeps: '2', bed: 'King bed', price: 'R1,850 per night', description: 'A spacious ocean-facing suite with a private balcony, soft linen and a relaxed coastal palette.', longDescription: 'The Ocean View Suite is designed as the signature room for guests who want morning coffee, sea air and a calm private balcony. The layout balances premium comfort with practical details for a short Cape Town escape.', image: { src: 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=82', alt: 'Luxury bedroom with warm neutral linen and coastal styling' }, amenities: ['Ocean-facing balcony', 'En-suite bathroom', 'Mini fridge', 'Coffee station', 'Soft premium linen'], included: ['Breakfast included', 'High-speed Wi-Fi', 'Daily housekeeping', 'Secure parking'] },
+    { name: 'Garden Courtyard Room', sleeps: '2', bed: 'Queen bed', price: 'R1,350 per night', description: 'A peaceful queen room opening onto a private courtyard with greenery and morning light.', longDescription: 'The Garden Courtyard Room is suited to relaxed couples, remote workers and guests who prefer a quieter tucked-away stay with private outdoor space after a day along the coast.', image: { src: 'https://images.unsplash.com/photo-1598928636135-d146006ff4be?auto=format&fit=crop&w=1200&q=82', alt: 'Boutique queen bedroom with natural textures and warm interior lighting' }, amenities: ['Private courtyard', 'En-suite shower', 'Work desk', 'Tea and coffee station', 'Wardrobe storage'], included: ['Breakfast included', 'High-speed Wi-Fi', 'Daily housekeeping', 'Secure parking'] },
+    { name: 'Deluxe Queen Room', sleeps: '2', bed: 'Queen bed', price: 'R1,150 per night', description: 'A refined queen room with calm coastal interiors, smart TV and a restful en-suite bathroom.', longDescription: 'The Deluxe Queen Room gives guests a polished, comfortable base for beach days, business trips or quick Cape Town stopovers, with all essentials presented in a premium guesthouse style.', image: { src: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=82', alt: 'Modern deluxe guest room with queen bed and elegant neutral decor' }, amenities: ['Calm coastal interiors', 'En-suite bathroom', 'Smart TV', 'Coffee station', 'Workspace nook'], included: ['Breakfast included', 'High-speed Wi-Fi', 'Daily housekeeping', 'Secure parking'] },
+  ],
+  amenities: [
+    { label: 'Free high-speed Wi-Fi', icon: 'Wifi' }, { label: 'Breakfast included', icon: 'Coffee' }, { label: 'Secure parking', icon: 'Car' }, { label: 'Ocean-view lounge', icon: 'Waves' },
+    { label: 'Walking distance to beach', icon: 'MapPin' }, { label: 'Airport transfer on request', icon: 'Plane' }, { label: 'Daily housekeeping', icon: 'Sparkles' }, { label: 'Coffee and tea station', icon: 'Coffee' },
+    { label: 'Smart TV', icon: 'Tv' }, { label: 'En-suite bathrooms', icon: 'Bath' }, { label: 'Workspace-friendly rooms', icon: 'BriefcaseBusiness' }, { label: 'Nearby restaurants', icon: 'Utensils' },
+  ],
+  gallery: [
+    { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80', alt: 'Wide sandy beach with blue ocean waves' },
+    { src: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80', alt: 'Coastal accommodation terrace with comfortable outdoor seating' },
+    { src: 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80', alt: 'Luxury bedroom with soft linen and warm neutral tones' },
+    { src: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80', alt: 'Modern bathroom with stone finishes and natural light' },
+    { src: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1200&q=80', alt: 'Fresh breakfast setting with coffee and pastries' },
+    { src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80', alt: 'Elegant lounge interior with coastal neutral furniture' },
+    { src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80', alt: 'Premium patio deck with modern coastal home styling' },
+    { src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80', alt: 'Golden sunset over water near the coastline' },
+    { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80', alt: 'Scenic coastal landscape with mountains and water' },
+  ],
+  locationPoints: ['Blouberg beachfront', 'Table Mountain views', 'Restaurants and cafés nearby', 'Kite surfing and beach walks', 'V&A Waterfront drive placeholder', 'Cape Town CBD drive placeholder', 'Cape Town International Airport drive placeholder'],
+  experiences: [
+    { title: 'Beach walks', icon: 'Waves', text: 'Start the day with Atlantic air, open sand and a slow walk along the Blouberg beachfront.' },
+    { title: 'Kitesurfing', icon: 'Wind', text: 'Watch colourful kites from the shore or book a beginner-friendly coastal session nearby.' },
+    { title: 'Sunset views', icon: 'Sun', text: 'Golden-hour views across Table Bay make every evening feel like a postcard.' },
+    { title: 'Local restaurants', icon: 'Utensils', text: 'Casual cafés, seafood dinners and relaxed wine bars are only a short ride away.' },
+    { title: 'Wine farms day trip', icon: 'Mountain', text: 'Plan a scenic day out to Durbanville or Stellenbosch wine routes.' },
+    { title: 'Cape Town city exploring', icon: 'MapPin', text: 'Use the guesthouse as a quiet coastal base for city, harbour and mountain experiences.' },
+  ],
+  reviews: [
+    { name: 'Mia & Daniel', type: 'Couple getaway', text: 'Beautifully styled, peaceful, and close enough to the beach that we could hear the ocean in the mornings.' },
+    { name: 'Thabo M.', type: 'Business traveller', text: 'Fast Wi-Fi, secure parking and a calm room made this feel much more personal than a standard hotel stay.' },
+    { name: 'Elena R.', type: 'International tourist', text: 'The location was perfect for Table Mountain views, beach walks and easy Cape Town exploring.' },
+  ],
+  policies: [
+    { question: 'Check-in', answer: 'Check-in is from 14:00. Earlier arrivals can be requested and are subject to room readiness.' },
+    { question: 'Check-out', answer: 'Check-out is by 10:00 so the rooms can be prepared for the next guests.' },
+    { question: 'House rules', answer: 'No smoking indoors, quiet hours after 22:00, and ID is required at check-in.' },
+    { question: 'Children and pets', answer: 'Children are welcome by arrangement. Pets may be accepted by prior approval only.' },
+    { question: 'Cancellation policy', answer: 'Cancellation terms are a placeholder for this concept and would be replaced with the guesthouse’s real policy.' },
+  ],
+  faqs: [
+    { question: 'Is breakfast included?', answer: 'Yes, a fresh breakfast is included in this concept package.' },
+    { question: 'Is there secure parking?', answer: 'Yes, secure on-site parking is listed as part of the guesthouse amenities.' },
+    { question: 'How close is the beach?', answer: 'The concept positions the guesthouse approximately five minutes from the beach.' },
+    { question: 'Do you offer airport transfers?', answer: 'Airport transfers are available on request as a placeholder service.' },
+    { question: 'Is there Wi-Fi?', answer: 'Yes, all rooms include free high-speed Wi-Fi.' },
+    { question: 'Can I check in late?', answer: 'Late check-in can be arranged by contacting the guesthouse in advance.' },
+    { question: 'Are children allowed?', answer: 'Children are welcome by arrangement, depending on room setup and availability.' },
+    { question: 'Do rooms have private bathrooms?', answer: 'Yes, each room includes an en-suite bathroom or shower.' },
+    { question: 'Can I book directly?', answer: 'Yes, the demo enquiry CTA is designed to support direct booking enquiries.' },
+    { question: 'What is the cancellation policy?', answer: 'The cancellation policy is placeholder content and should be replaced with the real business terms.' },
+  ],
+};
 
 export const benefits = [
   ['Designed to make your business look credible', ShieldCheck], ['Built for enquiries, not just decoration', HeartHandshake], ['Mobile-first experience', Smartphone], ['Clean structure and fast performance', Gauge], ['Easy to update later', PanelsTopLeft], ['Guidance with domain and hosting', Globe2],
