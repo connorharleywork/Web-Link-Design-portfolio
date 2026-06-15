@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import GuesthouseConcept from './pages/GuesthouseConcept';
 import UrbanBiteConcept from './pages/UrbanBiteConcept';
+import PrimeBuildConcept from './pages/PrimeBuildConcept';
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
@@ -23,6 +24,10 @@ export default function App() {
 
   if (activeConcept === 'urbanbite') {
     return <UrbanBiteConcept onBack={() => setActiveConcept(null)} />;
+  }
+
+  if (activeConcept === 'primebuild') {
+    return <PrimeBuildConcept onBack={() => setActiveConcept(null)} />;
   }
 
   return (

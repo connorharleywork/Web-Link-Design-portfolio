@@ -143,6 +143,17 @@ Paste your analytics snippet there when ready. Do not commit private tracking ID
 - Add optimized Open Graph imagery before public launch.
 - Consider a CMS later if frequent content editing becomes important.
 
+
+### Edit the PrimeBuild Construction concept
+
+The construction company demo concept lives in:
+
+```txt
+src/pages/PrimeBuildConcept.jsx
+```
+
+Most editable PrimeBuild content lives in `src/data/siteContent.js` inside the `primeBuildConcept` object, including services, project case studies, before/after cards, safety and compliance copy, service areas, testimonials, FAQs and Unsplash image URLs. Update the data object first when changing company copy, service details, project examples or stock photography. Use `PrimeBuildConcept.jsx` when changing layout, modal behaviour, quote-section fields, accordion interactions or the client enquiry handoff. The construction quote section reuses the existing Netlify `project-enquiry` form and keeps file uploads as message instructions for reliability.
+
 ### Edit the UrbanBite Restaurant concept
 
 The restaurant demo concept lives in:
