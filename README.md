@@ -163,3 +163,13 @@ src/pages/UrbanBiteConcept.jsx
 ```
 
 Most editable UrbanBite content lives in `src/data/siteContent.js` inside the `urbanBiteConcept` object, including images, featured dishes, menu categories, opening hours, gallery photos, specials, reviews and FAQs. Update the data object first when changing copy, prices, menu items or stock image URLs. Use `UrbanBiteConcept.jsx` when changing layout, interactions, the gallery lightbox, menu tabs, reservation section or the client enquiry handoff.
+
+### Edit the GlowHaus Beauty Studio concept
+
+The beauty studio demo concept lives in:
+
+```txt
+src/pages/GlowHausConcept.jsx
+```
+
+Most editable GlowHaus content lives in `src/data/siteContent.js` inside the `glowHausConcept` object, including treatment categories, signature services, gallery images, team profiles, opening hours, reviews and FAQs. Update the data object first when changing copy, prices, service names or Unsplash image URLs. Use `GlowHausConcept.jsx` when changing layout, booking-form fields, the before/after slider, service tabs, lightbox behaviour or the client enquiry handoff. The appointment section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Beauty Studio Website Concept`.
