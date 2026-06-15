@@ -12,12 +12,17 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import GuesthouseConcept from './pages/GuesthouseConcept';
+import UrbanBiteConcept from './pages/UrbanBiteConcept';
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
 
   if (activeConcept === 'guesthouse') {
     return <GuesthouseConcept onBack={() => setActiveConcept(null)} />;
+  }
+
+  if (activeConcept === 'urbanbite') {
+    return <UrbanBiteConcept onBack={() => setActiveConcept(null)} />;
   }
 
   return (
