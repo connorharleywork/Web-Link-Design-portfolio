@@ -1,5 +1,5 @@
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Bath, BedDouble, BriefcaseBusiness, Car, ChevronDown, Coffee, ExternalLink, Home, MapPin, Mountain, Plane, Search, ShieldCheck, Sparkles, Star, Sun, Tv, Utensils, Waves, Wifi, Wind, X } from 'lucide-react';
 import { guesthouseConcept } from '../data/siteContent';
 import Reveal from '../components/Reveal';
@@ -13,6 +13,11 @@ export default function GuesthouseConcept({ onBack }) {
   const [openFaq, setOpenFaq] = useState(0);
   const [openPolicy, setOpenPolicy] = useState(0);
   const bookingFields = useMemo(() => ['Check-in date', 'Check-out date', 'Guests'], []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
+
   const goToEnquiry = (message = 'Guesthouse Website Concept') => {
     window.dispatchEvent(new CustomEvent('select-website-type', { detail: 'Guesthouse / Airbnb Website' }));
     window.dispatchEvent(new CustomEvent('prefill-project-message', { detail: message }));
