@@ -14,6 +14,7 @@ import FloatingActions from './components/FloatingActions';
 import GuesthouseConcept from './pages/GuesthouseConcept';
 import UrbanBiteConcept from './pages/UrbanBiteConcept';
 import PrimeBuildConcept from './pages/PrimeBuildConcept';
+import GlowHausConcept from './pages/GlowHausConcept';
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
@@ -28,6 +29,10 @@ export default function App() {
 
   if (activeConcept === 'primebuild') {
     return <PrimeBuildConcept onBack={() => setActiveConcept(null)} />;
+  }
+
+  if (activeConcept === 'glowhaus') {
+    return <GlowHausConcept onBack={() => setActiveConcept(null)} />;
   }
 
   return (

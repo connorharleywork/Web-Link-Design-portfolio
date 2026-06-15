@@ -92,3 +92,9 @@ img, svg { max-width: 100%; }
 .premium-float { transform: translate3d(0,0,0); }
 .premium-float.is-floating { animation: premiumFloat 4.8s ease-in-out infinite; will-change: transform; }
 @media (max-width: 767px) { main { padding-bottom: 4.75rem; } }
+.glowhaus-page { color-scheme: light; }
+.glowhaus-page .noise-overlay { opacity: .08; }
+.glow-shimmer { position: relative; overflow: hidden; isolation: isolate; }
+.glow-shimmer::after { content: ""; position: absolute; inset: 0; transform: translateX(-125%) skewX(-16deg); background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent); animation: glowHausShimmer 3.8s ease-in-out infinite; z-index: -0; }
+@keyframes glowHausShimmer { 0%, 45% { transform: translateX(-125%) skewX(-16deg); } 70%, 100% { transform: translateX(125%) skewX(-16deg); } }
+@media (prefers-reduced-motion: reduce) { .glow-shimmer::after { animation: none; display: none; } }

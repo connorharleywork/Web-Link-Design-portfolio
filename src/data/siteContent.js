@@ -57,7 +57,7 @@ export const portfolioItems = [
   { name: 'Azure Tide Guesthouse', category: 'Guesthouse / Accommodation Website', description: 'A premium beach-inspired guesthouse website concept designed to showcase rooms, amenities, gallery, location, reviews, and direct booking enquiries.', features: ['Room showcase','Booking enquiry flow','Image gallery','Amenities section','Location and nearby attractions','Reviews and FAQs'], cta: 'View Guesthouse Concept', concept: 'guesthouse' },
   { name: 'UrbanBite Restaurant', category: 'Restaurant / Food Website', description: 'A premium restaurant website concept designed to showcase the dining experience, menu, reservations, location, reviews, specials, and direct enquiries.', features: ['Interactive menu','Table booking enquiry flow','Food gallery','Chef/story section','Location and opening hours','Reviews and FAQs','Mobile-first design'], cta: 'View Restaurant Concept', concept: 'urbanbite' },
   { name: 'PrimeBuild Construction', category: 'Construction / Contractor Website', description: 'A professional construction company website concept designed to showcase services, completed projects, safety standards, certifications, testimonials, and quote enquiries.', features: ['Service breakdown','Project portfolio','Quote request flow','Safety and compliance section','Testimonials','Service areas','Mobile-first design'], cta: 'View Construction Concept', concept: 'primebuild' },
-  { name: 'GlowHaus Beauty Studio', category: 'Beauty', description: 'Soft luxury beauty studio concept with treatment cards and booking pathways.', features: ['Treatments','Team','Booking'] },
+  { name: 'GlowHaus Beauty Studio', category: 'Beauty / Salon Website', description: 'A premium beauty studio website concept designed to showcase treatments, pricing, transformations, team profiles, gallery, reviews, and appointment enquiries.', features: ['Treatment menu','Online booking enquiry flow','Before/after transformations','Beauty gallery','Specialist profiles','Reviews and FAQs','Mobile-first design'], cta: 'View Beauty Studio Concept', concept: 'glowhaus' },
   { name: 'FitForm Coaching', category: 'Fitness', description: 'Personal coaching concept focused on programmes, outcomes and consultation leads.', features: ['Programmes','Results','Lead form'] },
   { name: 'CapeLegal Advisory', category: 'Professional Services', description: 'Refined advisory concept with service clarity, credibility cues and FAQ support.', features: ['Services','Insights','Enquiry'] },
 ];
@@ -269,5 +269,90 @@ export const primeBuildConcept = {
     ['What areas do you service?', 'The concept lists Cape Town CBD, Bloubergstrand, Durbanville, Bellville, Somerset West, Paarl, Stellenbosch, Southern Suburbs, Atlantic Seaboard, and Northern Suburbs.'],
     ['Do you provide workmanship guarantees?', 'A workmanship guarantee is included as a placeholder trust badge for concept purposes.'],
     ['How do payments usually work?', 'Construction payments are usually milestone based, with details confirmed in the accepted quotation and project agreement.'],
+  ].map(([question, answer]) => ({ question, answer })),
+};
+
+export const glowHausConcept = {
+  images: {
+    hero: { src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=2200&q=82', alt: 'Premium beauty studio styling with soft salon atmosphere' },
+    story: { src: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1400&q=82', alt: 'Woman receiving a calm skincare treatment in a beauty studio' },
+  },
+  trustBadges: ['Personalised treatments', 'Premium products', 'By appointment', 'Cape Town studio'],
+  highlights: ['Lash & brow specialists', 'Skin-focused treatments', 'Nail care', 'Makeup appointments', 'Personalised consultations', 'Calm private studio'],
+  categories: {
+    Lashes: [
+      ['Classic Lash Set', 'Natural length and softly defined everyday lashes.', '90 min', 'R650', 'Subtle definition'],
+      ['Hybrid Lash Set', 'A fuller blend of classic and volume lashes.', '120 min', 'R780', 'Soft glam eyes'],
+      ['Lash Lift & Tint', 'Lifted natural lashes with a polished dark tint.', '60 min', 'R420', 'Low-maintenance glow'],
+      ['Lash Fill', 'Refresh existing extensions and restore fullness.', '60 min', 'R380', 'Maintenance appointments'],
+    ],
+    Brows: [
+      ['Brow Shape & Tint', 'Clean shaping and a balanced custom tint.', '30 min', 'R220', 'Everyday polish'],
+      ['Brow Lamination', 'Fluffy, lifted brows with a smooth set finish.', '45 min', 'R480', 'Fuller-looking brows'],
+      ['Signature Brow Sculpt', 'Mapping, shaping, tint and finishing detail.', '45 min', 'R360', 'Refined brow symmetry'],
+      ['Henna Brows', 'Longer-lasting stain for softly filled brows.', '45 min', 'R420', 'Sparse brows'],
+    ],
+    Nails: [
+      ['Gel Manicure', 'Prep, shaping, cuticle care and glossy gel colour.', '60 min', 'R380', 'Polished hands'],
+      ['Builder Gel Overlay', 'Strengthening overlay with a refined finish.', '75 min', 'R520', 'Stronger natural nails'],
+      ['Gel Pedicure', 'Foot care, shaping and long-wear gel colour.', '60 min', 'R420', 'Holiday-ready feet'],
+      ['Nail Art Add-on', 'Minimal line work, chrome, French or soft details.', 'Add-on', 'from R80', 'Personalised details'],
+    ],
+    'Skin & Facials': [
+      ['Glow Facial', 'Hydrating cleanse, massage and radiance-focused mask.', '60 min', 'R690', 'Dull or tired skin'],
+      ['Deep Cleanse Facial', 'A deeper reset for congestion and texture.', '75 min', 'R780', 'Congested skin'],
+      ['Hydration Treatment', 'Comforting moisture support for a dewy finish.', '45 min', 'R580', 'Dry skin'],
+      ['Skin Consultation', 'A calm review of skin goals and treatment options.', '30 min', 'R250', 'New clients'],
+    ],
+    Makeup: [
+      ['Soft Glam Makeup', 'Polished makeup that photographs beautifully.', '75 min', 'R750', 'Events and shoots'],
+      ['Event Makeup', 'Long-wear glam tailored to your occasion.', '90 min', 'R950', 'Special occasions'],
+      ['Bridal Trial', 'A collaborative bridal look test before the day.', '90 min', 'R850', 'Brides-to-be'],
+      ['Bridal Makeup', 'Wedding-day makeup with a premium calm experience.', 'By quote', 'from R1,400', 'Bridal beauty'],
+    ],
+    Packages: [
+      ['The Glow Reset', 'Facial, brow refresh and simple finishing touches.', 'Bundle', 'R1,250', 'Self-care days'],
+      ['Lash & Brow Refresh', 'Lash lift with brow shape and tint.', 'Bundle', 'R780', 'Eye definition'],
+      ['Event Ready Package', 'Soft glam makeup with brows or lashes.', 'Bundle', 'R1,650', 'Occasion prep'],
+      ['Bridal Glow Package', 'Trial, skincare guidance and wedding makeup.', 'Bundle', 'from R2,800', 'Wedding prep'],
+    ],
+  },
+  signatures: [
+    { title: 'Signature Brow Sculpt', image: { src: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=82', alt: 'Luxury makeup and brow products on a soft beauty table' }, for: 'Clients who want balanced, natural-looking brows.', includes: 'Consultation, mapping, shaping, tint and finishing.', duration: '45 min', price: 'from R360' },
+    { title: 'Glow Facial', image: { src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=82', alt: 'Relaxing facial skincare treatment with soft studio lighting' }, for: 'Dull, tired or dehydrated skin needing radiance.', includes: 'Cleanse, exfoliation, massage, mask and aftercare.', duration: '60 min', price: 'from R690' },
+    { title: 'Event Ready Makeup', image: { src: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=82', alt: 'Makeup artist applying refined beauty makeup' }, for: 'Events, shoots, dinners and modern bridal moments.', includes: 'Skin prep, long-wear makeup and finishing touches.', duration: '75–90 min', price: 'from R750' },
+  ],
+  transformations: [
+    ['Brow Lamination', 'Fuller, lifted brows with a soft brushed finish.'],
+    ['Lash Lift', 'Natural lashes lifted for brighter-looking eyes.'],
+    ['Skin Glow Facial', 'Hydrated, refreshed skin with a dewy finish.'],
+  ],
+  gallery: [
+    ['https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1100&q=80','Client receiving a relaxing facial skincare treatment'],
+    ['https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1100&q=80','Beauty therapist applying skincare in a calm studio'],
+    ['https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1100&q=80','Elegant manicure with polished nail detail'],
+    ['https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1100&q=80','Stylish beauty salon interior lifestyle image'],
+    ['https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1100&q=80','Cosmetic products and makeup brushes flat lay'],
+    ['https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1100&q=80','Makeup artist applying event makeup'],
+    ['https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=1100&q=80','Woman with glowing skin in soft natural light'],
+    ['https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=80','Peaceful spa treatment room with towels and candles'],
+    ['https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1100&q=80','Luxury skincare bottles and beauty products'],
+    ['https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1100&q=80','Bridal inspired makeup and beauty styling detail'],
+  ].map(([src, alt]) => ({ src, alt })),
+  team: [
+    ['Mia Laurent','Founder & Lead Beauty Specialist','Brows, skin consultations, event beauty','Mia’s approach is soft, detailed, and client-led, focusing on treatments that enhance rather than overpower.','https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80'],
+    ['Ava Naidoo','Lash & Brow Artist','Lash lifts, hybrid sets, brow lamination','Ava creates clean, wearable eye treatments with careful mapping and gentle application.','https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80'],
+    ['Lara Smith','Nail Technician','Gel manicures, overlays, minimal nail art','Lara loves refined nail finishes, healthy prep and elegant details that last.','https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80'],
+    ['Noor Jacobs','Makeup Artist','Soft glam, bridal, event makeup','Noor builds luminous makeup looks that feel comfortable, photogenic and polished.','https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=80'],
+  ],
+  philosophy: ['Premium products', 'Hygiene-first tools', 'Personalised consultations', 'Aftercare guidance', 'Patch testing where relevant', 'Natural-looking results', 'Comfort-focused studio'],
+  hours: [['Monday','Closed'],['Tuesday','09:00–17:00'],['Wednesday','09:00–17:00'],['Thursday','09:00–19:00'],['Friday','09:00–18:00'],['Saturday','09:00–15:00'],['Sunday','Closed']],
+  reviews: [
+    ['Leah M.','Brow client','My brows have never looked this natural and polished. The studio felt calm, clean, and so professional.'],
+    ['Taryn K.','Glow Facial','My skin looked fresh without feeling over-treated. I loved the aftercare guidance and quiet studio atmosphere.'],
+    ['Amira P.','Bridal makeup','My makeup lasted beautifully and still felt like me. The whole appointment felt relaxed and premium.'],
+  ],
+  faqs: [
+    ['Do I need to book in advance?','Yes, advance booking is recommended because the studio works by appointment.'],['Do you accept walk-ins?','This concept is by appointment only, with occasional same-day availability.'],['How do I prepare for my appointment?','Arrive with clean skin where possible and share allergies, sensitivities or previous treatment concerns.'],['Do you offer bridal makeup?','Yes, bridal trials and wedding-day makeup packages are included in the concept.'],['How long do lash extensions last?','Most clients book fills every two to three weeks depending on aftercare and natural lash cycle.'],['Do you do patch tests?','Patch tests are recommended where tint, adhesives or active products are used.'],['What should I avoid after a facial?','Avoid steam, heavy exercise and strong actives immediately after facials; use SPF as guided.'],['Can I book multiple treatments together?','Yes, packages can combine lashes, brows, nails, facials and makeup.'],['What is your cancellation policy?','This demo assumes 24-hour notice for changes or cancellations.'],['Are deposits required?','Deposits may be required for bridal, packages or longer appointments.'],['Do you offer gift vouchers?','Gift voucher functionality can be added to a real beauty studio website.'],['Where is the studio located?','GlowHaus is presented as a Cape Town, South Africa concept studio.']
   ].map(([question, answer]) => ({ question, answer })),
 };
