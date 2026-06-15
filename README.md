@@ -173,3 +173,13 @@ src/pages/GlowHausConcept.jsx
 ```
 
 Most editable GlowHaus content lives in `src/data/siteContent.js` inside the `glowHausConcept` object, including treatment categories, signature services, gallery images, team profiles, opening hours, reviews and FAQs. Update the data object first when changing copy, prices, service names or Unsplash image URLs. Use `GlowHausConcept.jsx` when changing layout, booking-form fields, the before/after slider, service tabs, lightbox behaviour or the client enquiry handoff. The appointment section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Beauty Studio Website Concept`.
+
+### Edit the FitForm Coaching concept
+
+The fitness coach / online coaching demo concept lives in:
+
+```txt
+src/pages/FitFormConcept.jsx
+```
+
+Most editable FitForm content lives in `src/data/siteContent.js` inside the `fitFormConcept` object, including the goal selector copy, programme cards, FAQs, brand location and Unsplash image URLs. Use `FitFormConcept.jsx` when changing the dashboard visuals, programme-card reveal interaction, transformation toggle, 12-week timeline, pricing cards, coaching enquiry fields or the portfolio-to-contact handoff. The coaching enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Fitness Coach Website Concept`.
