@@ -15,6 +15,7 @@ import GuesthouseConcept from './pages/GuesthouseConcept';
 import UrbanBiteConcept from './pages/UrbanBiteConcept';
 import PrimeBuildConcept from './pages/PrimeBuildConcept';
 import GlowHausConcept from './pages/GlowHausConcept';
+import FitFormConcept from './pages/FitFormConcept';
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
@@ -33,6 +34,10 @@ export default function App() {
 
   if (activeConcept === 'glowhaus') {
     return <GlowHausConcept onBack={() => setActiveConcept(null)} />;
+  }
+
+  if (activeConcept === 'fitform') {
+    return <FitFormConcept onBack={() => setActiveConcept(null)} />;
   }
 
   return (
