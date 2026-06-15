@@ -17,6 +17,19 @@ export default function Contact() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
+    const storedWebsiteType = window.sessionStorage.getItem('prefillWebsiteType');
+    const storedMessage = window.sessionStorage.getItem('prefillProjectMessage');
+
+    if (storedWebsiteType) {
+      setWebsiteType(storedWebsiteType);
+      window.sessionStorage.removeItem('prefillWebsiteType');
+    }
+
+    if (storedMessage) {
+      setMessage(storedMessage);
+      window.sessionStorage.removeItem('prefillProjectMessage');
+    }
+
     const handler = (event) => setWebsiteType(event.detail || initialWebsiteType);
 
     const messageHandler = (event) => setMessage(event.detail || '');
