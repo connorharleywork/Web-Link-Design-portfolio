@@ -16,6 +16,7 @@ import UrbanBiteConcept from './pages/UrbanBiteConcept';
 import PrimeBuildConcept from './pages/PrimeBuildConcept';
 import GlowHausConcept from './pages/GlowHausConcept';
 import FitFormConcept from './pages/FitFormConcept';
+import CapeLegalConcept from './pages/CapeLegalConcept';
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
@@ -38,6 +39,10 @@ export default function App() {
 
   if (activeConcept === 'fitform') {
     return <FitFormConcept onBack={() => setActiveConcept(null)} />;
+  }
+
+  if (activeConcept === 'capelegal') {
+    return <CapeLegalConcept onBack={() => setActiveConcept(null)} />;
   }
 
   return (

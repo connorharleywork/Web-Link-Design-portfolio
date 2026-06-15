@@ -183,3 +183,13 @@ src/pages/FitFormConcept.jsx
 ```
 
 Most editable FitForm content lives in `src/data/siteContent.js` inside the `fitFormConcept` object, including the goal selector copy, programme cards, FAQs, brand location and Unsplash image URLs. Use `FitFormConcept.jsx` when changing the dashboard visuals, programme-card reveal interaction, transformation toggle, 12-week timeline, pricing cards, coaching enquiry fields or the portfolio-to-contact handoff. The coaching enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Fitness Coach Website Concept`.
+
+### Edit the CapeLegal Advisory concept
+
+The professional services / legal advisory demo concept lives in:
+
+```txt
+src/pages/CapeLegalConcept.jsx
+```
+
+Most editable CapeLegal content lives in `src/data/siteContent.js` inside the `capeLegalConcept` object, including advisory areas, process steps, advisor placeholder profiles, trust cards, resources, office hours, testimonials, FAQs and Unsplash image URLs. Update the data object first when changing service copy, demo credentials, disclaimers, professional-services wording or stock photography. Use `CapeLegalConcept.jsx` when changing the case-file selector, animated document stack, consultation intake form, timeline, accordion behaviour or the portfolio-to-contact handoff. The consultation enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Professional Services Website Concept`.
