@@ -59,7 +59,7 @@ export const portfolioItems = [
   { name: 'PrimeBuild Construction', category: 'Construction / Contractor Website', description: 'A professional construction company website concept designed to showcase services, completed projects, safety standards, certifications, testimonials, and quote enquiries.', features: ['Service breakdown','Project portfolio','Quote request flow','Safety and compliance section','Testimonials','Service areas','Mobile-first design'], cta: 'View Construction Concept', concept: 'primebuild' },
   { name: 'GlowHaus Beauty Studio', category: 'Beauty / Salon Website', description: 'A premium beauty studio website concept designed to showcase treatments, pricing, transformations, team profiles, gallery, reviews, and appointment enquiries.', features: ['Treatment menu','Online booking enquiry flow','Before/after transformations','Beauty gallery','Specialist profiles','Reviews and FAQs','Mobile-first design'], cta: 'View Beauty Studio Concept', concept: 'glowhaus' },
   { name: 'FitForm Coaching', category: 'Fitness / Coaching Website', description: 'A high-energy fitness coaching website concept designed to showcase programmes, trainer credibility, transformations, pricing, testimonials, and coaching enquiries.', features: ['Goal-based programme selector','Fitness dashboard-style UI','Transformation showcase','Coaching packages','Trainer profile','Testimonials and FAQs','Mobile-first lead flow'], cta: 'View Fitness Concept', concept: 'fitform' },
-  { name: 'CapeLegal Advisory', category: 'Professional Services', description: 'Refined advisory concept with service clarity, credibility cues and FAQ support.', features: ['Services','Insights','Enquiry'] },
+  { name: 'CapeLegal Advisory', category: 'Professional Services / Legal Advisory Website', description: 'A premium advisory website concept designed to showcase practice areas, advisor expertise, consultation flow, trust signals, resources, testimonials, and confidential enquiries.', features: ['Practice area selector','Consultation enquiry flow','Advisor profiles','Trust and credentials section','Resource/article layout','Testimonials and FAQs','Mobile-first design'], cta: 'View Professional Services Concept', concept: 'capelegal' },
 ];
 
 
@@ -381,4 +381,70 @@ export const fitFormConcept = {
     { title: 'Strength & Performance Plan', best: 'Measurable performance', for: 'Lifters and athletes wanting measurable performance', includes: ['Strength programming', 'Testing', 'Mobility', 'Recovery tracking'], duration: '8 to 12 weeks', price: 'From R1,400', image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=900&q=80' },
   ],
   faqs: ['Do I need gym experience?','Can I do online coaching only?','Do you create meal plans?','How often do we check in?','What if I miss a workout?','Can I train at home?','How long before I see results?','Do you work with beginners?','Do you offer strength-focused plans?','Is nutrition included?','Can I pause coaching?','How do I start?'].map(q => ({ question: q, answer: 'Yes — this demo FAQ would be customised to the coach’s real process. FitForm is positioned around flexible, beginner-friendly, structured coaching with realistic habit support and clear check-ins.' })),
+};
+
+
+export const capeLegalConcept = {
+  images: {
+    hero: { src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=82', alt: 'Premium modern boardroom and office interior suited to a professional advisory website' },
+    intro: { src: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=82', alt: 'Contract documents and a pen on a professional desk' },
+  },
+  trustBadges: ['Confidential enquiries','Contract review','Business advisory','Cape Town based'],
+  stats: [
+    { value: '15+', label: 'years combined advisory experience' },
+    { value: '240+', label: 'matters guided' },
+    { value: '6', label: 'advisory focus areas' },
+    { value: 'Private', label: 'confidential consultations' },
+  ],
+  highlights: ['Clear written advice','Practical next steps','Confidential consultation','Contract-focused support','Business and property guidance','Professional client care'],
+  practiceAreas: [
+    { title: 'Contract Review', description: 'Review and explanation of agreements before signing, helping clients understand obligations, risks, and practical next steps.', helps: 'Individuals, business owners, landlords, tenants, service providers', matters: 'Service agreements, lease agreements, supplier contracts, employment agreements', documents: 'Contracts, amendments, correspondence, terms and conditions' },
+    { title: 'Business Advisory', description: 'Practical guidance for small businesses needing structure, risk awareness, client terms, supplier agreements, and decision support.', helps: 'SMEs, startups, consultants, directors', matters: 'Business setup, service terms, supplier risk, client disputes, operational policies', documents: 'Company documents, policies, agreements, correspondence' },
+    { title: 'Property Matters', description: 'Advisory support around leases, sales, rental disputes, property documentation, and practical risk review.', helps: 'Landlords, tenants, buyers, sellers, property managers', matters: 'Lease review, purchase agreements, rental issues, body corporate queries', documents: 'Lease agreements, sale agreements, notices, correspondence' },
+    { title: 'Company Compliance', description: 'Support with company governance, basic compliance planning, internal policies, and document organisation.', helps: 'Business owners, directors, administrators', matters: 'Company records, internal rules, director decisions, compliance checklists', documents: 'Company registers, resolutions, policies, compliance notes' },
+    { title: 'Employment Guidance', description: 'Clear guidance around workplace documents, policies, contracts, and preparation for employment-related conversations.', helps: 'Employers, managers, employees, HR consultants', matters: 'Employment contracts, disciplinary preparation, workplace policies, role changes', documents: 'Contracts, warnings, policies, correspondence' },
+    { title: 'Estate & Planning Support', description: 'Structured support for planning documents and conversations around estate, family, and future decision-making.', helps: 'Individuals, families, professionals', matters: 'Planning discussions, document organisation, instruction preparation', documents: 'Wills, instructions, asset lists, planning notes' },
+    { title: 'Dispute Preparation', description: 'Organised preparation before difficult conversations, claims, or advisory sessions so facts and documents are easier to review.', helps: 'Individuals, businesses, property clients, managers', matters: 'Chronologies, correspondence review, issue lists, practical preparation', documents: 'Emails, notices, contracts, timelines, supporting evidence' },
+    { title: 'Policy & Document Drafting', description: 'Drafting support for clear business documents, internal policies, client terms, and practical operating templates.', helps: 'SMEs, consultants, HR teams, administrators', matters: 'Terms, procedures, templates, internal policy updates', documents: 'Policies, terms, checklists, letters, client-facing templates' },
+  ],
+  process: [
+    { title: 'Send confidential enquiry', text: 'Share the matter type, urgency, contact preference, and a short summary.' },
+    { title: 'Initial matter review', text: 'The advisory team reviews the information and identifies relevant documents.' },
+    { title: 'Scope and next-step guidance', text: 'You receive a clear scope direction before any advisory work begins.' },
+    { title: 'Advisory session or document review', text: 'The matter is discussed or documents are reviewed in a structured way.' },
+    { title: 'Written summary and follow-up', text: 'A plain-language summary records practical next steps and follow-up items.' },
+  ],
+  advisors: [
+    { name: 'Sarah van der Merwe', role: 'Principal Legal Advisor', focus: 'Contracts, property, business advisory', bio: 'Sarah is positioned as the calm lead advisor for complex decisions and document-heavy matters.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in a business portrait placeholder for principal advisor' },
+    { name: 'Daniel Petersen', role: 'Compliance Consultant', focus: 'Company compliance, policies, governance', bio: 'Daniel supports governance structure, policies, compliance checklists, and organised company records.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=82', alt: 'Professional man in a business portrait placeholder for compliance consultant' },
+    { name: 'Aisha Khan', role: 'Client Advisory Coordinator', focus: 'Intake, document preparation, client communication', bio: 'Aisha coordinates intake, documents, communication, and preparation so clients feel informed.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in office portrait placeholder for client advisory coordinator' },
+  ],
+  trustCards: ['Confidential enquiry handling','Clear written summaries','Plain-language guidance','Structured document review','Professional communication','Practical next steps','Secure document process placeholder','Transparent scope before work begins'],
+  trustSeals: ['Confidential consultations','Secure enquiry process','Professional advisory approach','Clear scope confirmation'],
+  resources: [
+    { category: 'Contracts', title: 'What to check before signing a service agreement', excerpt: 'Key clauses, obligations, renewal terms, and practical risks to understand before signing.', time: '4 min read' },
+    { category: 'Property', title: 'Questions to ask before entering a lease', excerpt: 'A practical lease review checklist for tenants, landlords, and property managers.', time: '5 min read' },
+    { category: 'Business', title: 'How small businesses can organise key documents', excerpt: 'Simple ways to keep company, policy, and client documents easier to find and review.', time: '3 min read' },
+    { category: 'Disputes', title: 'Why clear written terms reduce disputes', excerpt: 'How plain terms, records, and expectations reduce uncertainty in commercial relationships.', time: '4 min read' },
+  ],
+  hours: [['Monday','09:00–17:00'],['Tuesday','09:00–17:00'],['Wednesday','09:00–17:00'],['Thursday','09:00–17:00'],['Friday','09:00–15:30'],['Saturday','By appointment'],['Sunday','Closed']],
+  testimonials: [
+    { name: 'Client A.', type: 'Small business owner', text: 'The advice felt practical and organised. I understood the risks, the documents to update, and the next conversations to have.' },
+    { name: 'Client B.', type: 'Property client', text: 'The process was calm and clear. I knew what to question in the lease before making a decision.' },
+    { name: 'Client C.', type: 'Contract review client', text: 'I understood what the contract meant, what to question, and what steps to take before signing.' },
+  ],
+  faqs: [
+    ['Do I need to book a consultation?', 'Yes. A consultation helps clarify the matter, documents, timing, and next step.'],
+    ['Can I send documents for review?', 'Yes. This concept intake flow allows clients to indicate whether documents are available.'],
+    ['Is my enquiry confidential?', 'The concept is designed around confidential handling, with a demo-only disclaimer.'],
+    ['Do you assist businesses and individuals?', 'Yes, the concept positions support for business owners, professionals, families, and individuals.'],
+    ['Can you help with contracts?', 'Contract review is one of the main advisory areas presented in this concept.'],
+    ['Can you help with property matters?', 'Yes, property leases, sales documentation, notices, and correspondence are included as examples.'],
+    ['Do you offer once-off consultations?', 'The concept supports once-off advisory sessions or scoped document reviews.'],
+    ['How are fees usually discussed?', 'Fees are discussed after an initial scope review so expectations are clear before work begins.'],
+    ['Do you provide written summaries?', 'The process includes a written summary and follow-up step as a trust-building feature.'],
+    ['Does submitting the form create a legal relationship?', 'No. Submitting the demo form does not create a legal advisor/client relationship.'],
+    ['What should I prepare before a consultation?', 'Prepare the key documents, a short timeline, questions, deadlines, and preferred contact method.'],
+    ['Can you assist remotely?', 'Yes. The concept supports remote enquiries and consultations as an option.'],
+  ].map(([question, answer]) => ({ question, answer })),
 };
