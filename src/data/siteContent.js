@@ -55,8 +55,7 @@ export const processSteps = [
 
 export const portfolioItems = [
   { name: 'Azure Tide Guesthouse', category: 'Guesthouse / Accommodation Website', description: 'A premium beach-inspired guesthouse website concept designed to showcase rooms, amenities, gallery, location, reviews, and direct booking enquiries.', features: ['Room showcase','Booking enquiry flow','Image gallery','Amenities section','Location and nearby attractions','Reviews and FAQs'], cta: 'View Guesthouse Concept', concept: 'guesthouse' },
-  { name: 'LuxeStay Guesthouse', category: 'Hospitality', description: 'Boutique accommodation concept with room highlights and direct enquiry flow.', features: ['Room showcase','Gallery','Booking CTA'] },
-  { name: 'UrbanBite Restaurant', category: 'Restaurant', description: 'Atmospheric restaurant concept with menu storytelling and reservation prompts.', features: ['Menu','Reviews','Map'] },
+  { name: 'UrbanBite Restaurant', category: 'Restaurant / Food Website', description: 'A premium restaurant website concept designed to showcase the dining experience, menu, reservations, location, reviews, specials, and direct enquiries.', features: ['Interactive menu','Table booking enquiry flow','Food gallery','Chef/story section','Location and opening hours','Reviews and FAQs','Mobile-first design'], cta: 'View Restaurant Concept', concept: 'urbanbite' },
   { name: 'PrimeBuild Construction', category: 'Construction', description: 'Trust-led construction website concept for projects, services and quote requests.', features: ['Projects','Services','Quote form'] },
   { name: 'GlowHaus Beauty Studio', category: 'Beauty', description: 'Soft luxury beauty studio concept with treatment cards and booking pathways.', features: ['Treatments','Team','Booking'] },
   { name: 'FitForm Coaching', category: 'Fitness', description: 'Personal coaching concept focused on programmes, outcomes and consultation leads.', features: ['Programmes','Results','Lead form'] },
@@ -127,6 +126,53 @@ export const guesthouseConcept = {
     { question: 'Can I book directly?', answer: 'Yes, the demo enquiry CTA is designed to support direct booking enquiries.' },
     { question: 'What is the cancellation policy?', answer: 'The cancellation policy is placeholder content and should be replaced with the real business terms.' },
   ],
+};
+
+
+export const urbanBiteConcept = {
+  brandName: 'UrbanBite Restaurant',
+  location: '24 Bree Street, Cape Town, South Africa',
+  phone: '+27 XX XXX XXXX',
+  email: 'bookings@urbanbite.co.za',
+  quickInfo: ['Open Tue–Sun', 'Dinner & drinks', 'Cape Town', 'Reservations welcome'],
+  images: {
+    hero: { src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2200&q=82', alt: 'Warm modern restaurant interior with tables and pendant lighting' },
+    about: { src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1400&q=82', alt: 'Chef plating a premium restaurant dish in a professional kitchen' },
+  },
+  highlights: ['Seasonal menu', 'Craft cocktails', 'Private dining available', 'Vegetarian options', 'Locally inspired dishes', 'Walk-ins welcome'],
+  featuredDishes: [
+    { name: 'Charred Sirloin Steak', description: 'Flame-grilled sirloin with café de Paris butter, crispy potatoes, and seasonal greens.', price: 'R245', tag: 'Chef’s Pick', image: { src: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=82', alt: 'Charred steak with garnish on a dark restaurant plate' } },
+    { name: 'UrbanBite Signature Burger', description: 'Smashed beef patty, aged cheddar, caramelised onion, house pickles, and truffle fries.', price: 'R165', tag: 'Popular', image: { src: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1000&q=82', alt: 'Gourmet cheeseburger with fries on a restaurant table' } },
+    { name: 'Wild Mushroom Linguine', description: 'Fresh linguine, wild mushrooms, parmesan, cream, black pepper, and herb oil.', price: 'R155', tag: 'Vegetarian', image: { src: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=82', alt: 'Creamy mushroom pasta topped with herbs and parmesan' } },
+    { name: 'Crispy Calamari Small Plate', description: 'Lightly fried calamari with lemon aioli, chilli salt, and fresh herbs.', price: 'R125', tag: 'Small Plate', image: { src: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=1000&q=82', alt: 'Crispy fried seafood small plate with lemon and sauce' } },
+    { name: 'Citrus Cheesecake', description: 'Baked cheesecake with citrus curd, toasted crumb, and vanilla cream.', price: 'R95', tag: 'Dessert', image: { src: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=1000&q=82', alt: 'Elegant cheesecake dessert with citrus garnish' } },
+    { name: 'Smoked Espresso Martini', description: 'Vodka, espresso, coffee liqueur, and smoked orange.', price: 'R110', tag: 'Cocktail', image: { src: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1000&q=82', alt: 'Dark espresso martini cocktail in a coupe glass' } },
+  ],
+  menu: {
+    Starters: [['Whipped Feta & Flatbread','Olive oil, dukkah, herbs and warm flatbread.','R85','Vegetarian'],['Crispy Calamari','Lemon aioli, chilli salt and fresh herbs.','R125','Popular'],['Charred Broccolini','Tahini yoghurt, toasted seeds and lemon.','R95','Vegetarian'],['Beef Carpaccio','Rocket, parmesan, capers and truffle dressing.','R135','']],
+    Mains: [['Charred Sirloin Steak','Café de Paris butter, crispy potatoes and seasonal greens.','R245','Chef’s Pick'],['UrbanBite Signature Burger','Aged cheddar, caramelised onion, pickles and truffle fries.','R165','Popular'],['Wild Mushroom Linguine','Parmesan cream, black pepper and herb oil.','R155','Vegetarian'],['Harissa Roast Chicken','Smoky yoghurt, charred lemon and green salad.','R185','Spicy']],
+    Desserts: [['Citrus Cheesecake','Citrus curd, toasted crumb and vanilla cream.','R95','Popular'],['Dark Chocolate Fondant','Berry compote and espresso ice cream.','R110',''],['Olive Oil Panna Cotta','Honey, pistachio and orange zest.','R90',''],['Affogato','Vanilla gelato with a hot espresso pour.','R75','Vegetarian']],
+    Drinks: [['Smoked Espresso Martini','Vodka, espresso, coffee liqueur and smoked orange.','R110','Popular'],['Cape Spritz','Bitter orange, bubbles and rosemary.','R95',''],['House Lemonade','Lemon, mint, soda and burnt sugar syrup.','R55','Non-alcoholic'],['Single Origin Coffee','Espresso, flat white, cappuccino or iced coffee.','R38','']],
+    Wine: [['Chenin Blanc','Crisp local white wine by the glass.','R78',''],['Pinotage','Cape red with berry and spice notes.','R88',''],['MCC Brut','South African sparkling wine.','R95','Popular'],['Rosé','Dry coastal-style rosé served chilled.','R72','']],
+    Kids: [['Mini Burger & Fries','Small beef burger with house fries.','R75',''],['Tomato Pasta','Simple linguine with tomato sauce and parmesan.','R65','Vegetarian'],['Chicken Strips','Crispy chicken with chips and dip.','R70',''],['Ice Cream Cup','Vanilla ice cream with chocolate sauce.','R45','']]
+  },
+  hours: [['Monday','Closed'],['Tuesday','16:00–22:00'],['Wednesday','16:00–22:00'],['Thursday','16:00–22:00'],['Friday','12:00–23:00'],['Saturday','12:00–23:00'],['Sunday','12:00–20:00']],
+  gallery: [
+    ['https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1100&q=80','Close-up of a colourful plated restaurant dish'],['https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1100&q=80','Premium grilled main dish served with sides'],['https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1100&q=80','Craft cocktail on a bar counter'],['https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1100&q=80','Elegant dessert with cream and berries'],['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=80','Modern restaurant interior with warm lighting'],['https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=80','Restaurant table setting ready for dinner'],['https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1100&q=80','Friends dining together at a restaurant table'],['https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1100&q=80','Chef preparing food in a warm kitchen'],['https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=80','Coffee being poured in a café setting'],['https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1100&q=80','Evening restaurant atmosphere with moody lighting']
+  ].map(([src, alt]) => ({ src, alt })),
+  specials: [
+    { title: 'Tuesday Tasting Menu', text: 'A rotating chef’s selection of seasonal plates, perfect for discovering new favourites.', time: 'Available Tuesdays from 18:00' },
+    { title: 'Friday After-Work Drinks', text: 'Craft cocktails, small plates and city energy for teams, friends and date nights.', time: 'Fridays 16:00–19:00' },
+    { title: 'Sunday Long Lunch', text: 'Slow-roasted comfort dishes, relaxed service and an easy end to the week.', time: 'Sundays 12:00–16:00' },
+  ],
+  reviews: [
+    { name: 'Guest A.', type: 'Date night', text: 'Beautiful food, warm service, and the kind of atmosphere that makes you want to stay for one more drink.' },
+    { name: 'Guest B.', type: 'Family lunch', text: 'The menu had something for everyone, the space felt stylish but relaxed, and the desserts were a highlight.' },
+    { name: 'Guest C.', type: 'Business dinner', text: 'Polished, professional and easy to book. It felt premium without being stiff or uncomfortable.' },
+  ],
+  faqs: [
+    ['Do I need to book?','Reservations are recommended for dinner and weekends, but this demo also welcomes booking enquiries.'],['Do you accept walk-ins?','Yes, walk-ins are welcome when tables are available.'],['Do you offer vegetarian options?','Yes, vegetarian dishes are clearly marked throughout the menu.'],['Do you have vegan options?','Vegan-friendly dishes can be requested and would be confirmed by the kitchen.'],['Is there secure parking nearby?','The concept assumes nearby secure parking in the Bree Street area.'],['Can I book for a private event?','Yes, private dining, birthdays and small corporate dinners can be requested.'],['Do you offer takeaway?','Selected dishes may be available for takeaway in this concept.'],['Are children welcome?','Yes, children are welcome and a small kids menu is included.'],['Do you cater for allergies?','Guests should mention allergies when booking so the kitchen can advise.'],['Where are you located?','UrbanBite is presented at 24 Bree Street, Cape Town, South Africa.']
+  ].map(([question, answer]) => ({ question, answer })),
 };
 
 export const benefits = [

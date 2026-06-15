@@ -142,3 +142,13 @@ Paste your analytics snippet there when ready. Do not commit private tracking ID
 - Add a discovery-call booking link for visitors who prefer scheduling immediately.
 - Add optimized Open Graph imagery before public launch.
 - Consider a CMS later if frequent content editing becomes important.
+
+### Edit the UrbanBite Restaurant concept
+
+The restaurant demo concept lives in:
+
+```txt
+src/pages/UrbanBiteConcept.jsx
+```
+
+Most editable UrbanBite content lives in `src/data/siteContent.js` inside the `urbanBiteConcept` object, including images, featured dishes, menu categories, opening hours, gallery photos, specials, reviews and FAQs. Update the data object first when changing copy, prices, menu items or stock image URLs. Use `UrbanBiteConcept.jsx` when changing layout, interactions, the gallery lightbox, menu tabs, reservation section or the client enquiry handoff.
