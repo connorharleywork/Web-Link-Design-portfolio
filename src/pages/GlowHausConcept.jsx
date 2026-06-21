@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CalendarCheck, ChevronDown, ExternalLink, Heart, MapPin, Phone, Sparkles, Star, X } from 'lucide-react';
 import { glowHausConcept } from '../data/siteContent';
 import Reveal from '../components/Reveal';
+import BackToConceptsButton from '../components/BackToConceptsButton';
 
 const categories = Object.keys(glowHausConcept.categories);
 const beforeImages = [
@@ -41,7 +42,8 @@ export default function GlowHausConcept({ onBack }) {
 
   return <div className="glowhaus-page min-h-screen overflow-x-hidden bg-[#fbf3ea] text-[#3c2924]">
     <div className="pointer-events-none fixed z-50 hidden h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e7b8b2]/25 blur-3xl lg:block" style={{ left: cursor.x, top: cursor.y }} />
-    <header className="sticky top-0 z-40 border-b border-[#7b5148]/10 bg-[#fff9f4]/85 px-4 py-3 backdrop-blur-xl sm:px-5"><div className="mx-auto flex max-w-7xl items-center justify-between gap-3"><button onClick={onBack} className="rounded-full border border-[#7b5148]/15 px-4 py-2 text-sm text-[#7b5148] hover:bg-[#7b5148]/5">← Back to portfolio</button><button onClick={clientEnquiry} className="glow-shimmer rounded-full bg-[#7b5148] px-5 py-2.5 text-sm font-bold text-[#fff9f4]">Use this style for my beauty business</button></div></header>
+    <BackToConceptsButton onBack={onBack} />
+    <header className="sticky top-0 z-40 border-b border-[#7b5148]/10 bg-[#fff9f4]/85 px-4 py-3 backdrop-blur-xl sm:px-5"><div className="mx-auto flex max-w-7xl items-center justify-between gap-3"><button onClick={onBack} className="rounded-full border border-[#7b5148]/15 px-4 py-2 text-sm text-[#7b5148] hover:bg-[#7b5148]/5">← Back to Concepts</button><button onClick={clientEnquiry} className="glow-shimmer rounded-full bg-[#7b5148] px-5 py-2.5 text-sm font-bold text-[#fff9f4]">Use this style for my beauty business</button></div></header>
 
     <section className="relative isolate overflow-hidden px-4 py-16 sm:px-5 lg:min-h-[92vh] lg:py-24">
       <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_15%_20%,rgba(232,184,178,.55),transparent_24rem),radial-gradient(circle_at_82%_12%,rgba(222,191,138,.35),transparent_22rem),linear-gradient(135deg,#fffaf5,#f7e4df_55%,#efe0d2)]" />

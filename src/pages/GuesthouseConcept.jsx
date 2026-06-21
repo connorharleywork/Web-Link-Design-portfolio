@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Bath, BedDouble, BriefcaseBusiness, Car, ChevronDown, Coffee, ExternalLink, Home, MapPin, Mountain, Plane, Search, ShieldCheck, Sparkles, Star, Sun, Tv, Utensils, Waves, Wifi, Wind, X } from 'lucide-react';
 import { guesthouseConcept } from '../data/siteContent';
 import Reveal from '../components/Reveal';
+import BackToConceptsButton from '../components/BackToConceptsButton';
 
 const amenityIcons = { Wifi, Coffee, Car, Waves, MapPin, Plane, Sparkles, Tv, Bath, BriefcaseBusiness, Utensils, Home };
 const experienceIcons = { Waves, Wind, Sun, Utensils, Mountain, MapPin };
@@ -29,9 +30,10 @@ export default function GuesthouseConcept({ onBack }) {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#071521] text-[#f8f1e4]">
+      <BackToConceptsButton onBack={onBack} />
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#071521]/90 px-4 py-3 backdrop-blur-xl sm:px-5">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-          <button onClick={onBack} className="rounded-full border border-white/15 px-4 py-2 text-sm text-[#f4dfb1] transition hover:border-[#d8b56d]/60 hover:bg-white/5">← Back to portfolio</button>
+          <button onClick={onBack} className="rounded-full border border-white/15 px-4 py-2 text-sm text-[#f4dfb1] transition hover:border-[#d8b56d]/60 hover:bg-white/5">← Back to Concepts</button>
           <a href="#guesthouse-enquiry" className="hidden rounded-full bg-[#d8b56d] px-5 py-2.5 text-sm font-bold text-[#071521] transition hover:-translate-y-0.5 sm:inline-flex">Enquire Now</a>
         </div>
       </header>

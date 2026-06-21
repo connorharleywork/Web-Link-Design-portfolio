@@ -1,4 +1,4 @@
-import { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -11,6 +11,7 @@ import About from './components/About';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import { scrollToSection, scrollToTop } from './utils/navigation';
 
 
 const GuesthouseConcept = lazy(() => import('./pages/GuesthouseConcept'));
@@ -35,29 +36,56 @@ const withConceptLoading = (component) => <Suspense fallback={<ConceptLoading />
 
 export default function App() {
   const [activeConcept, setActiveConcept] = useState(null);
+  const [returnToConcepts, setReturnToConcepts] = useState(false);
+
+  const openConcept = (concept) => {
+    scrollToTop({ behavior: 'auto' });
+    setActiveConcept(concept);
+  };
+
+  const backToConcepts = () => {
+    setReturnToConcepts(true);
+    setActiveConcept(null);
+  };
+
+  useEffect(() => {
+    if (!activeConcept) {
+      scrollToTop({ behavior: 'auto' });
+    }
+  }, [activeConcept]);
+
+  useEffect(() => {
+    if (!activeConcept && returnToConcepts) {
+      const frame = window.requestAnimationFrame(() => {
+        scrollToSection('portfolio', { behavior: 'auto' });
+        setReturnToConcepts(false);
+      });
+      return () => window.cancelAnimationFrame(frame);
+    }
+  }, [activeConcept, returnToConcepts]);
 
   if (activeConcept === 'guesthouse') {
-    return withConceptLoading(<GuesthouseConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<GuesthouseConcept onBack={backToConcepts} />);
   }
 
   if (activeConcept === 'urbanbite') {
-    return withConceptLoading(<UrbanBiteConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<UrbanBiteConcept onBack={backToConcepts} />);
   }
 
   if (activeConcept === 'primebuild') {
-    return withConceptLoading(<PrimeBuildConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<PrimeBuildConcept onBack={backToConcepts} />);
   }
 
   if (activeConcept === 'glowhaus') {
-    return withConceptLoading(<GlowHausConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<GlowHausConcept onBack={backToConcepts} />);
   }
 
   if (activeConcept === 'fitform') {
-    return withConceptLoading(<FitFormConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<FitFormConcept onBack={backToConcepts} />);
   }
 
   if (activeConcept === 'capelegal') {
-    return withConceptLoading(<CapeLegalConcept onBack={() => setActiveConcept(null)} />);
+    return withConceptLoading(<CapeLegalConcept onBack={backToConcepts} />);
   }
 
   return (
@@ -65,7 +93,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Portfolio onOpenConcept={setActiveConcept} />
+        <Portfolio onOpenConcept={openConcept} />
         <Services />
         <About />
         <Packages />

@@ -3,13 +3,14 @@ import { ArrowUpRight, MessageCircle, PanelsTopLeft } from 'lucide-react';
 import { portfolioItems } from '../data/siteContent';
 import SectionHeader from './SectionHeader';
 import WebsiteDetailsModal from './WebsiteDetailsModal';
+import { scrollToSection } from '../utils/navigation';
 
 const filters = ['All', 'Hospitality', 'Food', 'Construction', 'Beauty', 'Fitness', 'Professional'];
 
 const enquire = (item) => {
   window.dispatchEvent(new CustomEvent('select-website-type', { detail: item.websiteType }));
   window.dispatchEvent(new CustomEvent('prefill-project-message', { detail: `I am interested in a website similar to ${item.name}.` }));
-  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 30);
+  setTimeout(() => scrollToSection('contact'), 30);
 };
 
 export default function Portfolio({ onOpenConcept }) {
@@ -92,7 +93,7 @@ export default function Portfolio({ onOpenConcept }) {
           <h3 className="text-2xl font-semibold text-[#fff6dd] sm:text-3xl">Seen a style that fits your business?</h3>
           <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#e8ddc5]">Tell us which concept you like and we’ll shape a website around your brand, services and goals.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-            <a href="#contact" className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 font-semibold text-[#17130b]">Start a Project</a>
+            <button onClick={() => scrollToSection('contact')} className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 font-semibold text-[#17130b]">Start a Project</button>
             <a href="https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%20saw%20your%20website%20concepts%20and%20I%27d%20like%20to%20chat%20about%20a%20website." className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">WhatsApp Web Link Designs</a>
           </div>
         </div>
