@@ -3,7 +3,7 @@
 import { Bot, CalendarCheck, Gauge, Globe2, HeartHandshake, LineChart, MailCheck, PanelsTopLeft, Search, ShieldCheck, Smartphone, Sparkles, Wand2, Wrench } from 'lucide-react';
 
 export const brand = {
-  name: 'Web Link Desings',
+  name: 'Web Link Designs',
   tagline: 'Premium websites that make businesses look trusted and ready to buy from',
   primaryCta: 'Start a Project',
   secondaryCta: 'Explore Website Concepts',
@@ -199,7 +199,7 @@ export const contact = {
   emailLink: 'mailto:weblinkdesign3r@gmail.com',
   whatsapp: '+27 81 828 6752',
   phoneLink: 'tel:+27818286752',
-  whatsappLink: 'https://wa.me/27818286752?text=Hi%20Web%20Link%20Desings%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.',
+  whatsappLink: 'https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.',
   location: 'South Africa',
 };
 
