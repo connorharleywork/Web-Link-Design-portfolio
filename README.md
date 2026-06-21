@@ -1,20 +1,20 @@
-# Web Link Desings Portfolio
+# Web Link Designs Portfolio
 
 ## Pre-marketing polish
 
-This site has been pre-marketing polished for **Web Link Desings** so it is ready to share with business owners through WhatsApp groups, Facebook groups, and direct messages.
+This site has been pre-marketing polished for **Web Link Designs** so it is ready to share with business owners through WhatsApp groups, Facebook groups, and direct messages.
 
 Business contact details:
 
 - Email: weblinkdesign3r@gmail.com
 - Phone / WhatsApp: +27 81 828 6752
 - Phone link: tel:+27818286752
-- WhatsApp link: https://wa.me/27818286752?text=Hi%20Web%20Link%20Desings%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.
+- WhatsApp link: https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.
 
 Important deployment reminder: the `project-enquiry` Netlify Forms flow must be tested after every deploy by submitting a real test enquiry on the live Netlify URL and confirming it appears in the Netlify dashboard and email notifications.
 
 
-A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Desings**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
+A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
 
 ## Install dependencies
 
