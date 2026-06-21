@@ -4,13 +4,13 @@ import { Bot, CalendarCheck, Gauge, Globe2, HeartHandshake, LineChart, MailCheck
 
 export const brand = {
   name: 'Web Link Designs',
-  tagline: 'Premium websites that make businesses look trusted and ready to buy from',
+  tagline: 'Premium web design studio',
   primaryCta: 'Start a Project',
   secondaryCta: 'Explore Website Concepts',
 };
 
 export const navLinks = [
-  ['Home', 'home'], ['Concepts', 'portfolio'], ['Services', 'services'], ['Packages', 'packages'], ['Process', 'process'], ['Contact', 'contact'],
+  ['Home', 'home'], ['Concepts', 'portfolio'], ['Services', 'services'], ['About', 'about'], ['Packages', 'packages'], ['Process', 'process'], ['Contact', 'contact'],
 ];
 
 export const websiteOptions = [
@@ -27,30 +27,28 @@ export const websiteOptions = [
 ];
 
 export const services = [
-  ['Custom Website Design', Wand2, 'Tailored layouts with a premium visual system built around your offer, audience and goals.'],
-  ['Website Redesign', Sparkles, 'Turn an outdated site into a polished, credible presence that feels current and trustworthy.'],
-  ['Mobile Optimisation', Smartphone, 'Responsive pages, large tap targets and smooth layouts across phone, tablet, laptop and desktop.'],
-  ['SEO Setup Basics', Search, 'Clean titles, descriptions, headings and page structure so search engines can understand your site.'],
-  ['Contact Forms & Enquiry Funnels', MailCheck, 'Clear calls-to-action, short forms and enquiry paths designed to generate qualified leads.'],
-  ['Booking / Appointment Integration', CalendarCheck, 'Connect visitors to booking tools, WhatsApp, calendars or appointment request flows.'],
-  ['Website Maintenance', Wrench, 'Ongoing content edits, checks and improvements so your site stays sharp after launch.'],
-  ['Hosting & Domain Guidance', Globe2, 'Straightforward guidance so domain, hosting and launch decisions feel simple.'],
-  ['AI Chatbot Add-on', Bot, 'Optional assistant-style chat experiences for common questions and lead capture.'],
-  ['Analytics Setup', LineChart, 'Analytics-ready setup so you can understand traffic, page behaviour and enquiries.'],
+  ['Custom Website Design', Wand2, 'A website designed around your business, services and ideal customers — not a generic template.'],
+  ['Website Redesign', Sparkles, 'Refresh an outdated website so it feels current, credible and easier for customers to understand.'],
+  ['Mobile Optimisation', Smartphone, 'Layouts, spacing and tap targets planned first for phones, then refined for larger screens.'],
+  ['SEO Setup Basics', Search, 'Page titles, descriptions, headings and clean structure to help search engines read your site.'],
+  ['Contact Forms and Enquiry Flows', MailCheck, 'Simple forms, WhatsApp links and clear calls-to-action that make it easy to get in touch.'],
+  ['Hosting and Domain Guidance', Globe2, 'Practical help choosing, connecting and understanding your domain and hosting options.'],
+  ['Website Maintenance', Wrench, 'Ongoing content edits, checks and small improvements after launch when you need them.'],
+  ['Analytics Setup', LineChart, 'Basic tracking setup so you can see visits, popular pages and how people enquire.'],
 ];
 
 export const packages = [
-  { name: 'Starter Website', price: 'From R3,500', audience: 'For lean businesses that need a credible online presence quickly.', outcome: 'A polished 1–3 page website with the essentials: clear positioning, mobile design and a simple enquiry flow.', features: ['1–3 conversion-focused pages','Mobile-friendly responsive layout','Contact form and CTA sections','Basic SEO setup','Launch guidance'] },
-  { name: 'Business Website', price: 'From R6,500', audience: 'For growing businesses that want stronger trust, clearer services and more enquiries.', outcome: 'A complete company website with service sections, proof points and a stronger route from browsing to enquiry.', popular: true, features: ['4–7 polished pages','Service and industry sections','Gallery or portfolio area','Contact/enquiry form','Analytics-ready setup','Trust and credibility cues'] },
-  { name: 'Premium Website', price: 'From R12,000', audience: 'For brands that want a high-end custom website and a more memorable digital experience.', outcome: 'A premium web presence with deeper strategy, richer interactions and a refined structure for future growth.', features: ['8+ custom pages','Advanced premium animations','Custom conversion sections','Blog/news-ready structure','Booking or enquiry flow','Premium polish and review rounds'] },
+  { name: 'Starter Website', price: 'From R3,500', audience: 'Best for small businesses starting out.', features: ['1–3 pages','Mobile-friendly layout','Contact form','Basic SEO setup','Launch guidance'] },
+  { name: 'Business Website', price: 'From R6,500', audience: 'Best for businesses that need a stronger online presence.', popular: true, features: ['4–7 pages','Services section','Gallery or portfolio','Enquiry form','Analytics setup','Mobile-first design'] },
+  { name: 'Premium Website', price: 'From R12,000', audience: 'Best for brands that want a more custom, high-end website.', features: ['8+ pages','Advanced sections','Premium animations','Blog/news-ready structure','Booking or enquiry flow','Extra polish and launch support'] },
 ];
 
 export const processSteps = [
-  { title: 'First message', text: 'Send a short enquiry with your business type, goals and what you need the website to achieve.' },
-  { title: 'Scope & direction', text: 'We clarify pages, features, content, timeline and the website option that best fits your business.' },
-  { title: 'Design concept', text: 'You receive a premium visual direction focused on credibility, clarity and conversion.' },
-  { title: 'Build & refine', text: 'The website is built responsively, reviewed together and polished across key screen sizes.' },
-  { title: 'Launch & support', text: 'We guide domain/hosting steps, launch cleanly and plan any maintenance or future improvements.' },
+  { title: 'Tell us what you need', text: 'Share your business, goals, rough budget and any website examples you like.' },
+  { title: 'Plan the website structure', text: 'We map the pages, sections and enquiry path so the website has a clear job.' },
+  { title: 'Design the look and feel', text: 'You get a visual direction that suits your brand and feels right for your customers.' },
+  { title: 'Build and review', text: 'The website is built, checked on mobile and refined with your feedback.' },
+  { title: 'Launch and support', text: 'We guide the launch steps and discuss updates or maintenance if you need them.' },
 ];
 
 export const portfolioItems = [
@@ -182,16 +180,16 @@ export const benefits = [
 export const trustBadges = ['Mobile-first build', 'Enquiry form ready', 'Basic SEO setup', 'Launch guidance included'];
 
 export const faqs = [
-  ['How long does a website take?', 'Most small websites take 1–3 weeks once content is ready. Larger builds, e-commerce features or custom integrations may need a longer timeline.'],
-  ['Do I need to know exactly what I want?', 'No. Send what you know, even if it is rough. We can guide the structure, pages and best website option from there.'],
-  ['Will the website help generate enquiries?', 'Yes. The layout, copy sections and calls-to-action are planned to make your business look credible and guide visitors toward contacting you.'],
-  ['Do I need to have a domain already?', 'No. You can start without one, and we can guide you on buying and connecting the right domain.'],
-  ['Can you redesign my current website?', 'Yes. A redesign can keep what works, improve what does not, and make your brand feel more premium and current.'],
-  ['Will the website work on mobile?', 'Yes. Every website is designed mobile-first and tested across common screen sizes.'],
-  ['Can you help with hosting?', 'Yes. We can advise on simple hosting options and help you understand what you need before launch.'],
-  ['Can I update the website myself?', 'Version 1 can be built so common content is easy to edit. A CMS can also be planned if you need frequent updates.'],
-  ['Do you offer monthly maintenance?', 'Yes. Maintenance can include updates, edits, checks, small improvements and ongoing polish after launch.'],
-  ['Can you add booking forms or payment later?', 'Yes. Booking tools, payment links or full commerce features can be added as your website grows.'],
+  ['How long does a website take?', 'Most small business websites take 1–3 weeks once content is ready. Larger websites can take longer.'],
+  ['What do I need to provide?', 'A short business overview, services, contact details, logo if you have one, images if available, and any examples you like.'],
+  ['Do I need a domain already?', 'No. You can enquire first, and we can guide you on choosing and connecting a domain.'],
+  ['Can you help with hosting?', 'Yes. We can explain simple hosting options and help you understand what is needed before launch.'],
+  ['Will the website work on mobile?', 'Yes. Mobile optimisation is planned from the start so the site is easy to use on phones.'],
+  ['Can you redesign my current website?', 'Yes. We can keep what works, improve the structure and give the website a cleaner, more professional feel.'],
+  ['Can you add WhatsApp or booking buttons?', 'Yes. WhatsApp, booking links and enquiry buttons can be added where they make sense.'],
+  ['Do you offer monthly maintenance?', 'Yes. Maintenance can cover content updates, small improvements, checks and ongoing customisation.'],
+  ['How do I start?', 'Send an enquiry with your business type and what you need. We will respond with the best next step.'],
+  ['What happens after I enquire?', 'We review your message, clarify the scope, and suggest a suitable direction, package and timeline.'],
 ];
 
 export const contact = {
@@ -200,7 +198,7 @@ export const contact = {
   whatsapp: '+27 81 828 6752',
   phoneLink: 'tel:+27818286752',
   whatsappLink: 'https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.',
-  location: 'South Africa',
+  location: 'Cape Town, South Africa',
 };
 
 export const primeBuildConcept = {

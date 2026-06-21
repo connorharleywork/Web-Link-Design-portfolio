@@ -14,7 +14,23 @@ Business contact details:
 Important deployment reminder: the `project-enquiry` Netlify Forms flow must be tested after every deploy by submitting a real test enquiry on the live Netlify URL and confirming it appears in the Netlify dashboard and email notifications.
 
 
-A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
+A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, enquiry-focused content, Netlify Forms support, and editable content data.
+
+
+## Homepage conversion polish update
+
+This pass completed the homepage conversion polish for **Web Link Designs**:
+
+- Homepage hero copy now clearly positions the studio around professional, mobile-friendly business websites.
+- Website concepts are positioned as the main browsing and enquiry section, with concept cards and a follow-up CTA strip.
+- An About / founder-led section was added to build credibility without fake claims or invented credentials.
+- Services, packages, process and FAQ copy were refined for small business owners using clear South African wording.
+- The six concept pages are now lazy-loaded with `React.lazy` and `Suspense` so the homepage bundle stays lighter while keeping concept navigation smooth.
+
+Remaining TODOs:
+
+- After Netlify deployment, submit a live test enquiry and confirm the `project-enquiry` form appears in Netlify.
+- Review real client imagery and testimonials when available so the homepage can become more specific without inventing proof.
 
 ## Install dependencies
 

@@ -30,8 +30,8 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-14">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .75 }}>
           <p className="mb-5 text-xs font-semibold uppercase tracking-[.28em] text-[#d8b56d] sm:text-sm sm:tracking-[.32em]">Web Link Designs</p>
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-.04em] text-[#fff6dd] sm:text-5xl md:text-7xl lg:text-[5.25rem]">Premium websites that make businesses look <span className="gold-text">credible, expensive and ready to trust.</span></h1>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-[#c9c0ad] sm:text-lg sm:leading-8">Premium, conversion-focused websites for businesses that need to look established, explain their value clearly, and turn visitors into quality enquiries.</p>
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-[-.04em] text-[#fff6dd] sm:text-5xl md:text-6xl lg:text-[4.85rem]">Premium websites that make your business look professional and ready to win trust.</h1>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#c9c0ad] sm:text-lg sm:leading-8">Web Link Designs creates polished, mobile-friendly websites for businesses that need to look credible, explain their value clearly, and turn visitors into quality enquiries.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a href="#portfolio" className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 text-center font-semibold text-[#161109] shadow-[0_0_42px_rgba(216,181,109,.28)] transition hover:-translate-y-0.5 hover:shadow-[0_0_60px_rgba(216,181,109,.36)]">Explore Website Concepts</a>
             <a href="#contact" className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 text-center font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">Start a Project</a>

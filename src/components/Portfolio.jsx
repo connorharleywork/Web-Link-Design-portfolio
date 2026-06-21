@@ -33,8 +33,10 @@ export default function Portfolio({ onOpenConcept }) {
         <SectionHeader
           eyebrow="Website Concepts"
           title="Choose a website style for your business."
-          text="Explore polished concept websites designed for different industries. View the live-style concept, open the details, or enquire about a similar website for your business."
+          text="Browse concept websites created for different industries. Each one shows a style, structure, and enquiry flow that can be customised for your business."
         />
+
+        <div className="mx-auto mb-8 max-w-3xl rounded-[1.5rem] border border-[#d8b56d]/20 bg-[#d8b56d]/10 p-5 text-center leading-7 text-[#f7e8bd]">These are concept websites, not templates. They show the level of design, structure, and interaction your own business website can be built around.</div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-2.5">
           {filters.map((filter) => (
@@ -73,7 +75,7 @@ export default function Portfolio({ onOpenConcept }) {
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-5 sm:p-6">
-                <p className="text-sm text-[#d8b56d]">{String(index + 1).padStart(2, '0')} · {item.category}</p>
+                <p className="text-sm font-semibold text-[#d8b56d]">{item.category}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-[#fff6dd]">{item.name}</h3>
                 <p className="mt-3 leading-7 text-[#c9c0ad]">{item.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">{item.features.map((feature) => <span className="rounded-full bg-white/5 px-3 py-1.5 text-xs text-[#ddd2bc]" key={feature}>{feature}</span>)}</div>
@@ -85,6 +87,14 @@ export default function Portfolio({ onOpenConcept }) {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-10 rounded-[2rem] border border-[#d8b56d]/25 bg-gradient-to-br from-[#d8b56d]/18 via-white/[.05] to-transparent p-6 text-center sm:p-8">
+          <h3 className="text-2xl font-semibold text-[#fff6dd] sm:text-3xl">Seen a style that fits your business?</h3>
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#e8ddc5]">Tell us which concept you like, and we’ll shape a website around your brand, services, and goals.</p>
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="#contact" className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 font-semibold text-[#17130b]">Start a Project</a>
+            <a href="https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%20saw%20your%20website%20concepts%20and%20I%27d%20like%20to%20chat%20about%20a%20website." className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">WhatsApp Web Link Designs</a>
+          </div>
         </div>
       </div>
       <WebsiteDetailsModal item={selected} onClose={() => setSelected(null)} onOpenConcept={openConcept} onEnquire={startEnquiry} />
