@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Star } from 'lucide-react';
+import { scrollToSection } from '../utils/navigation';
 
 const badges = ['Mobile-first', 'Fast-loading', 'Built for enquiries', 'Custom design'];
 const panels = ['Strategy', 'Design', 'Launch'];

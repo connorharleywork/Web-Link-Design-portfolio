@@ -44,7 +44,7 @@ export default function About() {
               <PenTool size={34} />
             </div>
             <p className="mt-6 text-sm font-semibold uppercase tracking-[.25em] text-[#d8b56d]">Founder-style support</p>
-            <h3 className="mt-3 text-3xl font-semibold tracking-tight text-[#fff6dd]">A practical studio approach for small businesses.</h3>
+            <h3 className="mt-3 text-3xl font-semibold tracking-tight text-[#fff6dd]">A practical studio approach for businesses.</h3>
             <div className="mt-6 grid gap-3">
               {founderPoints.map((point) => (
                 <div className="flex items-center gap-3 rounded-2xl bg-white/[.045] px-4 py-3 text-[#e8ddc5]" key={point}>
