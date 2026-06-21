@@ -24,8 +24,8 @@ export default function About() {
           <SectionHeader
             align="left"
             eyebrow="About Web Link Designs"
-            title="Founder-led website design with a focus on trust, clarity, and enquiries."
-            text="Web Link Designs is a Cape Town-based web design studio helping small businesses look professional online. The focus is simple: create websites that feel refined, work beautifully on mobile, explain the business clearly, and make it easy for visitors to enquire."
+            title="Founder-led website design with a focus on trust, clarity and enquiries."
+            text="Web Link Designs is a Cape Town-based web design studio helping small businesses look professional online. The focus is simple: create websites that feel refined, work beautifully on mobile, explain the business clearly and make it easy for visitors to enquire."
           />
           <div className="grid gap-3 sm:grid-cols-2">
             {trustPoints.map((point, index) => (

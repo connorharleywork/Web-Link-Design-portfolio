@@ -2,7 +2,7 @@
 
 ## Pre-marketing polish
 
-This site has been pre-marketing polished for **Web Link Designs** so it is ready to share with business owners through WhatsApp groups, Facebook groups, and direct messages.
+This site has been pre-marketing polished for **Web Link Designs** so it is ready to share with business owners through WhatsApp groups, Facebook groups and direct messages.
 
 Business contact details:
 
@@ -14,7 +14,7 @@ Business contact details:
 Important deployment reminder: the `project-enquiry` form submission flow must be tested after every deploy by submitting a real test enquiry on the live Netlify URL and confirming it appears in the deployment dashboard and email notifications.
 
 
-A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, enquiry-focused content, static form handling support, and editable content data.
+A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, enquiry-focused content, static form handling support and editable content data.
 
 
 ## Homepage conversion polish update
@@ -130,7 +130,7 @@ The contact form is configured for Form handling and keeps the form name stable 
 
 - A hidden static form is included in `index.html` so the hosting form handler can detect it during deployment.
 - The React contact form in `src/components/Contact.jsx` posts URL-encoded data using the same form name: `project-enquiry`.
-- The form fields are `name`, `business`, `email`, `phone`, `websiteType`, `budget`, and `message`.
+- The form fields are `name`, `business`, `email`, `phone`, `websiteType`, `budget` and `message`.
 - A `bot-field` honeypot is included to reduce spam submissions.
 
 After deploying to Netlify:
@@ -157,7 +157,7 @@ Tip: if notifications do not arrive, check the recipient spam folder first, then
 
 ## Analytics setup note
 
-Add your Google Analytics, Plausible, or other tracking script in `index.html` inside the `<head>` tag when you are ready to measure traffic.
+Add your Google Analytics, Plausible or other tracking script in `index.html` inside the `<head>` tag when you are ready to measure traffic.
 
 Paste your analytics snippet there when ready. Do not commit private tracking IDs if the repository is public.
 
@@ -222,16 +222,16 @@ Most editable CapeLegal content lives in `src/data/siteContent.js` inside the `c
 
 ## Concepts and website options
 
-The old standalone **Website Concepts** homepage section has been merged into the **Website Concepts / Portfolio** section so visitors browse website options, concept previews, details, and enquiries from one focused area.
+The old standalone **Website Concepts** homepage section has been merged into the **Website Concepts / Portfolio** section so visitors browse website options, concept previews, details and enquiries from one focused area.
 
-Concept card content is editable from the main site content data file at `src/data/siteContent.js`, especially the `portfolioItems` array. Each concept card now supports three actions: **View Concept**, **View Details**, and **Enquire**. The enquiry action preselects the matching website type in the existing Netlify `project-enquiry` form.
+Concept card content is editable from the main site content data file at `src/data/siteContent.js`, especially the `portfolioItems` array. Each concept card now supports three actions: **View Concept**, **View Details** and **Enquire**. The enquiry action preselects the matching website type in the existing Netlify `project-enquiry` form.
 
 ## Manual launch QA checklist
 
-Before sharing the site in WhatsApp groups, Facebook groups, or direct messages:
+Before sharing the site in WhatsApp groups, Facebook groups or direct messages:
 
 - Test the homepage on a mobile-sized screen.
-- Test all six concept pages: Azure Tide Guesthouse, UrbanBite Restaurant, PrimeBuild Construction, GlowHaus Beauty Studio, FitForm Coaching, and CapeLegal Advisory.
+- Test all six concept pages: Azure Tide Guesthouse, UrbanBite Restaurant, PrimeBuild Construction, GlowHaus Beauty Studio, FitForm Coaching and CapeLegal Advisory.
 - Test each **View Concept** button.
 - Test each **View Details** button.
 - Test each **Enquire** button and confirm the website type is preselected in the main Web Link Designs contact form.

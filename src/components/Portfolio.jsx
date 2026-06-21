@@ -33,10 +33,10 @@ export default function Portfolio({ onOpenConcept }) {
         <SectionHeader
           eyebrow="Website Concepts"
           title="Choose a website style for your business."
-          text="Browse concept websites created for different industries. Each one shows a style, structure, and enquiry flow that can be customised for your business."
+          text="Browse concept websites created for different industries. Each one shows a style, structure and enquiry flow that can be customised for your business."
         />
 
-        <div className="mx-auto mb-8 max-w-3xl rounded-[1.5rem] border border-[#d8b56d]/20 bg-[#d8b56d]/10 p-5 text-center leading-7 text-[#f7e8bd]">These are concept websites, not templates. They show the level of design, structure, and interaction your own business website can be built around.</div>
+        <div className="mx-auto mb-8 max-w-3xl rounded-[1.5rem] border border-[#d8b56d]/20 bg-[#d8b56d]/10 p-5 text-center leading-7 text-[#f7e8bd]">These are concept websites, not templates. They show the level of design, structure and interaction your own business website can be built around.</div>
 
         <div className="mb-8 flex flex-wrap justify-center gap-2.5">
           {filters.map((filter) => (
@@ -90,7 +90,7 @@ export default function Portfolio({ onOpenConcept }) {
         </div>
         <div className="mt-10 rounded-[2rem] border border-[#d8b56d]/25 bg-gradient-to-br from-[#d8b56d]/18 via-white/[.05] to-transparent p-6 text-center sm:p-8">
           <h3 className="text-2xl font-semibold text-[#fff6dd] sm:text-3xl">Seen a style that fits your business?</h3>
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#e8ddc5]">Tell us which concept you like, and we’ll shape a website around your brand, services, and goals.</p>
+          <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#e8ddc5]">Tell us which concept you like and we’ll shape a website around your brand, services and goals.</p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <a href="#contact" className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 font-semibold text-[#17130b]">Start a Project</a>
             <a href="https://wa.me/27818286752?text=Hi%20Web%20Link%20Designs%2C%20I%20saw%20your%20website%20concepts%20and%20I%27d%20like%20to%20chat%20about%20a%20website." className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">WhatsApp Web Link Designs</a>
