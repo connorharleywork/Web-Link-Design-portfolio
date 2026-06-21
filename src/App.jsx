@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import WebsiteOptions from './components/WebsiteOptions';
 import Services from './components/Services';
 import Packages from './components/Packages';
 import Process from './components/Process';
@@ -50,11 +49,10 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <WebsiteOptions />
+        <Portfolio onOpenConcept={setActiveConcept} />
         <Services />
         <Packages />
         <Process />
-        <Portfolio onOpenConcept={setActiveConcept} />
         <WhyChooseUs />
         <Contact />
         <FAQ />

@@ -193,3 +193,9 @@ src/pages/CapeLegalConcept.jsx
 ```
 
 Most editable CapeLegal content lives in `src/data/siteContent.js` inside the `capeLegalConcept` object, including advisory areas, process steps, advisor placeholder profiles, trust cards, resources, office hours, testimonials, FAQs and Unsplash image URLs. Update the data object first when changing service copy, demo credentials, disclaimers, professional-services wording or stock photography. Use `CapeLegalConcept.jsx` when changing the case-file selector, animated document stack, consultation intake form, timeline, accordion behaviour or the portfolio-to-contact handoff. The consultation enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Professional Services Website Concept`.
+
+## Concepts and website options
+
+The old standalone **Website Options** homepage section has been merged into the **Website Concepts / Portfolio** section so visitors browse website options, concept demos, details, and enquiries from one focused area.
+
+Concept card content is editable from the main site content data file at `src/data/siteContent.js`, especially the `portfolioItems` array. Each concept card now supports three actions: **View Concept**, **View Details**, and **Enquire**. The enquiry action preselects the matching website type in the existing Netlify `project-enquiry` form.
