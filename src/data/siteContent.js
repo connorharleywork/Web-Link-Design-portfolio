@@ -110,7 +110,7 @@ export const guesthouseConcept = {
     { question: 'Check-out', answer: 'Check-out is by 10:00 so the rooms can be prepared for the next guests.' },
     { question: 'House rules', answer: 'No smoking indoors, quiet hours after 22:00, and ID is required at check-in.' },
     { question: 'Children and pets', answer: 'Children are welcome by arrangement. Pets may be accepted by prior approval only.' },
-    { question: 'Cancellation policy', answer: 'Example cancellation terms are shown for layout demonstration and can be customised for the real guesthouse.' },
+    { question: 'Cancellation policy', answer: 'Example cancellation terms are shown for example layout and can be customised for the real guesthouse.' },
   ],
   faqs: [
     { question: 'Is breakfast included?', answer: 'Yes, a fresh breakfast is included in this concept package.' },
@@ -121,8 +121,8 @@ export const guesthouseConcept = {
     { question: 'Can I check in late?', answer: 'Late check-in can be arranged by contacting the guesthouse in advance.' },
     { question: 'Are children allowed?', answer: 'Children are welcome by arrangement, depending on room setup and availability.' },
     { question: 'Do rooms have private bathrooms?', answer: 'Yes, each room includes an en-suite bathroom or shower.' },
-    { question: 'Can I book directly?', answer: 'Yes, the demo enquiry CTA is designed to support direct booking enquiries.' },
-    { question: 'What is the cancellation policy?', answer: 'Example cancellation wording is shown for layout demonstration and can be customised for the real business.' },
+    { question: 'Can I book directly?', answer: 'Yes, the enquiry CTA is designed to support direct booking enquiries.' },
+    { question: 'What is the cancellation policy?', answer: 'Example cancellation wording is shown for example layout and can be customised for the real business.' },
   ],
 };
 
@@ -130,8 +130,8 @@ export const guesthouseConcept = {
 export const urbanBiteConcept = {
   brandName: 'UrbanBite Restaurant',
   location: '24 Bree Street, Cape Town, South Africa',
-  phone: 'Demo contact details shown for concept layout only.',
-  email: 'Demo email shown for concept layout only.',
+  phone: 'Illustrative contact area shown for concept layout only.',
+  email: 'Illustrative email area shown for concept layout only.',
   quickInfo: ['Open Tue–Sun', 'Dinner & drinks', 'Cape Town', 'Reservations welcome'],
   images: {
     hero: { src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2200&q=82', alt: 'Warm modern restaurant interior with tables and pendant lighting' },
@@ -169,7 +169,7 @@ export const urbanBiteConcept = {
     { name: 'Guest C.', type: 'Business dinner', text: 'Polished, professional and easy to book. It felt premium without being stiff or uncomfortable.' },
   ],
   faqs: [
-    ['Do I need to book?','Reservations are recommended for dinner and weekends, but this demo also welcomes booking enquiries.'],['Do you accept walk-ins?','Yes, walk-ins are welcome when tables are available.'],['Do you offer vegetarian options?','Yes, vegetarian dishes are clearly marked throughout the menu.'],['Do you have vegan options?','Vegan-friendly dishes can be requested and would be confirmed by the kitchen.'],['Is there secure parking nearby?','The concept assumes nearby secure parking in the Bree Street area.'],['Can I book for a private event?','Yes, private dining, birthdays and small corporate dinners can be requested.'],['Do you offer takeaway?','Selected dishes may be available for takeaway in this concept.'],['Are children welcome?','Yes, children are welcome and a small kids menu is included.'],['Do you cater for allergies?','Guests should mention allergies when booking so the kitchen can advise.'],['Where are you located?','UrbanBite is presented at 24 Bree Street, Cape Town, South Africa.']
+    ['Do I need to book?','Reservations are recommended for dinner and weekends, but this concept also welcomes booking enquiries.'],['Do you accept walk-ins?','Yes, walk-ins are welcome when tables are available.'],['Do you offer vegetarian options?','Yes, vegetarian dishes are clearly marked throughout the menu.'],['Do you have vegan options?','Vegan-friendly dishes can be requested and would be confirmed by the kitchen.'],['Is there secure parking nearby?','The concept assumes nearby secure parking in the Bree Street area.'],['Can I book for a private event?','Yes, private dining, birthdays and small corporate dinners can be requested.'],['Do you offer takeaway?','Selected dishes may be available for takeaway in this concept.'],['Are children welcome?','Yes, children are welcome and a small kids menu is included.'],['Do you cater for allergies?','Guests should mention allergies when booking so the kitchen can advise.'],['Where are you located?','UrbanBite is presented at 24 Bree Street, Cape Town, South Africa.']
   ].map(([question, answer]) => ({ question, answer })),
 };
 
@@ -268,7 +268,7 @@ export const primeBuildConcept = {
     ['Do you offer maintenance work?', 'Yes, repairs, maintenance, waterproofing coordination, and property improvements are included.'],
     ['How soon can a project start?', 'Start dates depend on scope, materials, site access, and team availability.'],
     ['What areas do you service?', 'The concept lists Cape Town CBD, Bloubergstrand, Durbanville, Bellville, Somerset West, Paarl, Stellenbosch, Southern Suburbs, Atlantic Seaboard, and Northern Suburbs.'],
-    ['Do you provide workmanship guarantees?', 'A workmanship guarantee is shown as an example trust signal for layout demonstration.'],
+    ['Do you provide workmanship guarantees?', 'A workmanship guarantee is shown as an example trust signal for example layout.'],
     ['How do payments usually work?', 'Construction payments are usually milestone based, with details confirmed in the accepted quotation and project agreement.'],
   ].map(([question, answer]) => ({ question, answer })),
 };
@@ -354,7 +354,7 @@ export const glowHausConcept = {
     ['Amira P.','Bridal makeup','My makeup lasted beautifully and still felt like me. The whole appointment felt relaxed and premium.'],
   ],
   faqs: [
-    ['Do I need to book in advance?','Yes, advance booking is recommended because the studio works by appointment.'],['Do you accept walk-ins?','This concept is by appointment only, with occasional same-day availability.'],['How do I prepare for my appointment?','Arrive with clean skin where possible and share allergies, sensitivities or previous treatment concerns.'],['Do you offer bridal makeup?','Yes, bridal trials and wedding-day makeup packages are included in the concept.'],['How long do lash extensions last?','Most clients book fills every two to three weeks depending on aftercare and natural lash cycle.'],['Do you do patch tests?','Patch tests are recommended where tint, adhesives or active products are used.'],['What should I avoid after a facial?','Avoid steam, heavy exercise and strong actives immediately after facials; use SPF as guided.'],['Can I book multiple treatments together?','Yes, packages can combine lashes, brows, nails, facials and makeup.'],['What is your cancellation policy?','This demo assumes 24-hour notice for changes or cancellations.'],['Are deposits required?','Deposits may be required for bridal, packages or longer appointments.'],['Do you offer gift vouchers?','Gift voucher functionality can be added to a real beauty studio website.'],['Where is the studio located?','GlowHaus is presented as a Cape Town, South Africa concept studio.']
+    ['Do I need to book in advance?','Yes, advance booking is recommended because the studio works by appointment.'],['Do you accept walk-ins?','This concept is by appointment only, with occasional same-day availability.'],['How do I prepare for my appointment?','Arrive with clean skin where possible and share allergies, sensitivities or previous treatment concerns.'],['Do you offer bridal makeup?','Yes, bridal trials and wedding-day makeup packages are included in the concept.'],['How long do lash extensions last?','Most clients book fills every two to three weeks depending on aftercare and natural lash cycle.'],['Do you do patch tests?','Patch tests are recommended where tint, adhesives or active products are used.'],['What should I avoid after a facial?','Avoid steam, heavy exercise and strong actives immediately after facials; use SPF as guided.'],['Can I book multiple treatments together?','Yes, packages can combine lashes, brows, nails, facials and makeup.'],['What is your cancellation policy?','This concept assumes 24-hour notice for changes or cancellations.'],['Are deposits required?','Deposits may be required for bridal, packages or longer appointments.'],['Do you offer gift vouchers?','Gift voucher functionality can be added to a real beauty studio website.'],['Where is the studio located?','GlowHaus is presented as a Cape Town, South Africa concept studio.']
   ].map(([question, answer]) => ({ question, answer })),
 };
 
