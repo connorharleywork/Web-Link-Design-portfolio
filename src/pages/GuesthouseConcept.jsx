@@ -13,11 +13,14 @@ export default function GuesthouseConcept({ onBack }) {
   const [activeImage, setActiveImage] = useState(null);
   const [openFaq, setOpenFaq] = useState(0);
   const [openPolicy, setOpenPolicy] = useState(0);
+  const [conceptMessage, setConceptMessage] = useState(null);
   const bookingFields = useMemo(() => ['Check-in date', 'Check-out date', 'Guests'], []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, []);
+
+  const showConceptInteraction = (message = 'This is a concept booking search. On a live guesthouse website, this could check room availability, filter dates and guide guests to book or send an enquiry.') => setConceptMessage(message);
 
   const goToEnquiry = (message = 'Guesthouse / Airbnb Website') => {
     window.sessionStorage.setItem('prefillWebsiteType', 'Guesthouse / Airbnb Website');
@@ -48,7 +51,7 @@ export default function GuesthouseConcept({ onBack }) {
             <h1 className="max-w-4xl text-4xl font-semibold leading-[0.98] tracking-[-0.05em] text-white sm:text-6xl lg:text-8xl">Wake up to the Atlantic.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#eadfcf] sm:text-xl">A boutique coastal guesthouse in Bloubergstrand, designed for slow mornings, ocean air and effortless Cape Town stays.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button onClick={() => goToEnquiry('Guesthouse / Airbnb Website — availability enquiry')} className="premium-button rounded-full bg-[#d8b56d] px-7 py-4 font-bold text-[#071521]">Check Availability</button>
+              <button onClick={() => showConceptInteraction()} className="premium-button rounded-full bg-[#d8b56d] px-7 py-4 font-bold text-[#071521]">Check Availability</button>
               <button onClick={() => document.getElementById('guesthouse-rooms')?.scrollIntoView({ behavior: 'smooth' })} className="rounded-full border border-white/20 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white/15">Explore Rooms</button>
             </div>
             <div className="mt-8 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
@@ -60,7 +63,7 @@ export default function GuesthouseConcept({ onBack }) {
             <div className="mt-5 grid gap-3">
               {bookingFields.map((field) => <label key={field} className="text-sm font-semibold text-[#243142]">{field}<input type={field.includes('date') ? 'date' : 'number'} min={field === 'Guests' ? '1' : undefined} placeholder="2" className="mt-2 min-h-[52px] w-full rounded-2xl border border-[#d8c8aa] bg-white px-4 text-[#071521] outline-none focus:border-[#8f6a2f]" /></label>)}
             </div>
-            <button onClick={() => goToEnquiry('Guesthouse / Airbnb Website — booking panel enquiry')} className="mt-5 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#071521] px-5 font-bold text-white"><Search size={18} /> Search Stay</button>
+            <button onClick={() => showConceptInteraction()} className="mt-5 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#071521] px-5 font-bold text-white"><Search size={18} /> Search Stay</button>
             <p className="mt-4 text-xs leading-5 text-[#6e6255]">Example booking panel — connects to a direct enquiry flow for portfolio showcase.</p>
           </Reveal>
         </div>
@@ -83,9 +86,10 @@ export default function GuesthouseConcept({ onBack }) {
 
         <section className="px-4 pb-20 sm:px-5"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2"><AccordionList title="Guesthouse policies" items={guesthouseConcept.policies} open={openPolicy} setOpen={setOpenPolicy}/><AccordionList title="Frequently asked questions" items={guesthouseConcept.faqs} open={openFaq} setOpen={setOpenFaq}/></div></section>
 
-        <section id="guesthouse-enquiry" className="px-4 pb-24 sm:px-5"><div className="mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] border border-[#d8b56d]/30 bg-[linear-gradient(135deg,rgba(216,181,109,.22),rgba(255,255,255,.06)),#071521] p-8 text-center shadow-2xl shadow-black/30 sm:p-12"><p className="text-sm uppercase tracking-[0.25em] text-[#f4dfb1]">Direct booking CTA</p><h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">Ready for a coastal escape?</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#eadfcf]">Send an enquiry and we’ll confirm availability, room options and the best direct rate.</p><button onClick={()=>goToEnquiry('Guesthouse / Airbnb Website — interested in a premium hospitality website like Azure Tide Guesthouse.')} className="premium-button mt-8 rounded-full bg-[#d8b56d] px-8 py-4 font-bold text-[#071521]">Enquire Now</button><p className="mx-auto mt-6 max-w-3xl rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-[#cbd8d7]">This concept website shows how a business in this industry could be presented online. Images, prices, services, reviews and business details are illustrative.</p></div></section>
+        <section id="guesthouse-enquiry" className="px-4 pb-24 sm:px-5"><div className="mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] border border-[#d8b56d]/30 bg-[linear-gradient(135deg,rgba(216,181,109,.22),rgba(255,255,255,.06)),#071521] p-8 text-center shadow-2xl shadow-black/30 sm:p-12"><p className="text-sm uppercase tracking-[0.25em] text-[#f4dfb1]">Direct booking CTA</p><h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-6xl">Ready for a coastal escape?</h2><p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#eadfcf]">Send an enquiry and we’ll confirm availability, room options and the best direct rate.</p><div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"><button onClick={()=>showConceptInteraction('This is a concept direct-booking enquiry. On a live guesthouse website, this could send stay dates, guest details and questions to the owner.')} className="premium-button rounded-full bg-[#d8b56d] px-8 py-4 font-bold text-[#071521]">Enquire Now</button><button onClick={()=>goToEnquiry('Guesthouse / Airbnb Website — interested in a premium hospitality website like Azure Tide Guesthouse.')} className="rounded-full border border-[#d8b56d]/40 px-8 py-4 font-bold text-[#f4dfb1]">Use this style for my business</button></div><p className="mx-auto mt-6 max-w-3xl rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-6 text-[#cbd8d7]">This concept website shows how a business in this industry could be presented online. Images, prices, services, reviews and business details are illustrative.</p></div></section>
       </main>
-      {activeRoom && <RoomModal room={activeRoom} onClose={()=>setActiveRoom(null)} onEnquire={()=>goToEnquiry(`Guesthouse / Airbnb Website — enquiry about ${activeRoom.name}`)} />}
+      {activeRoom && <RoomModal room={activeRoom} onClose={()=>setActiveRoom(null)} onEnquire={()=>showConceptInteraction('On a live guesthouse website, this could send the selected room and guest details to the owner.')} />}
+      {conceptMessage && <ConceptModal message={conceptMessage} onClose={()=>setConceptMessage(null)} />}
       {activeImage && <Lightbox image={activeImage} onClose={()=>setActiveImage(null)} />}
     </div>
   );
@@ -99,6 +103,9 @@ function AccordionList({ title, items, open, setOpen }) {
 }
 function RoomModal({ room, onClose, onEnquire }) {
   return <div className="fixed inset-0 z-50 grid place-items-center bg-black/70 p-4 backdrop-blur-sm" role="dialog" aria-modal="true"><div className="max-h-[92vh] w-full max-w-4xl overflow-auto rounded-[2rem] bg-[#fbf4e7] text-[#071521] shadow-2xl"><div className="relative"><img src={room.image.src} alt={room.image.alt} className="h-80 w-full object-cover"/><button onClick={onClose} className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-[#071521]/80 text-white"><X /></button></div><div className="p-6 sm:p-8"><p className="font-bold text-[#8f6a2f]">From {room.price}</p><h2 className="mt-2 text-3xl font-semibold">{room.name}</h2><p className="mt-4 leading-8 text-[#5d6570]">{room.longDescription}</p><div className="mt-6 grid gap-5 md:grid-cols-2"><div><h3 className="font-semibold">Amenities</h3><ul className="mt-3 space-y-2 text-[#5d6570]">{room.amenities.map(a=><li key={a} className="flex gap-2"><BedDouble size={17} className="mt-1 text-[#8f6a2f]"/>{a}</li>)}</ul></div><div><h3 className="font-semibold">Included</h3><ul className="mt-3 space-y-2 text-[#5d6570]">{room.included.map(a=><li key={a} className="flex gap-2"><ShieldCheck size={17} className="mt-1 text-[#8f6a2f]"/>{a}</li>)}</ul></div></div><button onClick={onEnquire} className="mt-7 rounded-full bg-[#071521] px-6 py-4 font-bold text-white">Enquire About This Room</button></div></div></div>;
+}
+function ConceptModal({ message, onClose }) {
+  return <div className="fixed inset-0 z-50 grid place-items-center bg-black/65 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="guesthouse-concept-title"><div className="w-full max-w-lg rounded-[2rem] border border-[#d8b56d]/35 bg-[#fbf4e7] p-6 text-[#071521] shadow-2xl sm:p-8"><div className="flex items-start justify-between gap-4"><div><p className="text-sm font-bold uppercase tracking-[0.22em] text-[#8f6a2f]">Azure Tide demo interaction</p><h2 id="guesthouse-concept-title" className="mt-3 text-3xl font-semibold">Concept feature preview</h2></div><button onClick={onClose} className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#071521] text-white" aria-label="Close concept message"><X /></button></div><p className="mt-5 text-lg leading-8 text-[#5d6570]">{message}</p><button onClick={onClose} className="mt-6 w-full rounded-full bg-[#d8b56d] px-6 py-4 font-bold text-[#071521]">Got it</button></div></div>;
 }
 function Lightbox({ image, onClose }) {
   return <div className="fixed inset-0 z-50 grid place-items-center bg-black/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true"><button onClick={onClose} className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white"><X /></button><figure className="max-w-5xl"><img src={image.src} alt={image.alt} className="max-h-[82vh] rounded-[2rem] object-contain shadow-2xl"/><figcaption className="mt-3 text-center text-sm text-[#d8d0c0]">{image.alt} · Illustrative image</figcaption></figure></div>;
