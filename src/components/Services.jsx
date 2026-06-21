@@ -9,7 +9,7 @@ export default function Services() {
         <SectionHeader
           eyebrow="Services"
           title="Everything your business website needs to feel professional."
-          text="From the first design direction to launch, we help you create a website that is clear, mobile-friendly, and easy for customers to enquire from."
+          text="From the first design direction to launch, we help you create a website that is clear, mobile-friendly and easy for customers to enquire from."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(([name, Icon, copy], i) => (

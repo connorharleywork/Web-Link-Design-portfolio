@@ -26,7 +26,7 @@ export default function Packages() {
             </Reveal>
           ))}
         </div>
-        <p className="mt-8 text-center leading-7 text-[#c9c0ad]">Final pricing depends on pages, features, content, integrations, and timeline.</p>
+        <p className="mt-8 text-center leading-7 text-[#c9c0ad]">Final pricing depends on pages, features, content, integrations and timeline.</p>
       </div>
     </section>
   );
