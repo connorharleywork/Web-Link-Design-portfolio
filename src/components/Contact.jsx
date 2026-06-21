@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CheckCircle2, Mail, MapPin, MessageCircle, ShieldCheck } from 'lucide-react';
-import { contact, trustBadges, websiteOptions } from '../data/siteContent';
+import { contact, packages, trustBadges, websiteOptions } from '../data/siteContent';
 import SectionHeader from './SectionHeader';
 import Reveal from './Reveal';
 
@@ -171,6 +171,11 @@ export default function Contact() {
                   {websiteOptions.map((option) => (
                     <option key={option.title}>{option.title}</option>
                   ))}
+                  <optgroup label="Packages">
+                    {packages.map((option) => (
+                      <option key={option.name}>{option.name}</option>
+                    ))}
+                  </optgroup>
                 </select>
                 {errors.websiteType && <span className="mt-2 block text-sm text-[#ffcc9c]">{errors.websiteType}</span>}
               </label>
@@ -211,7 +216,7 @@ export default function Contact() {
               <ContactLine icon={MapPin} text={contact.location} />
             </div>
             <div className="mt-8 rounded-3xl border border-[#d8b56d]/20 bg-[#d8b56d]/10 p-5 text-sm leading-7 text-[#f7e8bd]">
-              Premium design, mobile polish, fast performance and a conversion-focused structure are included in every build.
+              Professional design, mobile polish, fast performance and a clear enquiry path are included in every build.
             </div>
           </Reveal>
         </div>
