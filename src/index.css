@@ -13,11 +13,14 @@
 }
 
 * { box-sizing: border-box; }
-html { overflow-x: hidden; scroll-padding-top: 7rem; }
+html { overflow-x: hidden; scroll-padding-top: 8.25rem; }
 
-[id] { scroll-margin-top: 7.5rem; }
+[id] { scroll-margin-top: 8.25rem; }
 #home { scroll-margin-top: 0; }
-@media (max-width: 767px) { [id] { scroll-margin-top: 6.5rem; } }
+@media (max-width: 767px) {
+  html { scroll-padding-top: 7.25rem; }
+  [id] { scroll-margin-top: 7.25rem; }
+}
 body {
   margin: 0;
   min-width: 320px;

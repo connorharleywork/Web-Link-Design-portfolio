@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Building2, CheckCircle2, ChevronDown, ClipboardCheck, Hammer, HardHat, Home, Layers3, MapPin, Ruler, ShieldCheck, Shovel, Star, Wrench, X } from 'lucide-react';
 import { primeBuildConcept } from '../data/siteContent';
 import Reveal from '../components/Reveal';
+import BackToConceptsButton from '../components/BackToConceptsButton';
 
 const iconMap = { Home, Hammer, Building2, Layers3, ClipboardCheck, HardHat, Wrench, ShieldCheck, Shovel, Ruler };
 
@@ -25,9 +26,10 @@ export default function PrimeBuildConcept({ onBack }) {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#080d12] text-[#f7f2e8]">
+      <BackToConceptsButton onBack={onBack} />
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#080d12]/90 px-4 py-3 backdrop-blur-xl sm:px-5">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
-          <button onClick={onBack} className="rounded-full border border-white/15 px-4 py-2 text-sm text-[#f2c66d] hover:bg-white/5">← Back to portfolio</button>
+          <button onClick={onBack} className="rounded-full border border-white/15 px-4 py-2 text-sm text-[#f2c66d] hover:bg-white/5">← Back to Concepts</button>
           <button onClick={() => clientEnquiry()} className="rounded-full bg-[#d69b2d] px-5 py-2.5 text-sm font-bold text-[#081018]">Use this style for my construction company</button>
         </div>
       </header>

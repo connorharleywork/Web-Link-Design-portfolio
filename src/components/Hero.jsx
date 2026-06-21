@@ -33,8 +33,8 @@ export default function Hero() {
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-[-.04em] text-[#fff6dd] sm:text-5xl md:text-6xl lg:text-[4.85rem]">Premium websites that make your business look professional and ready to win trust.</h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#c9c0ad] sm:text-lg sm:leading-8">Web Link Designs creates polished, mobile-friendly websites for businesses that need to look credible, explain their value clearly and turn visitors into quality enquiries.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-            <a href="#portfolio" className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 text-center font-semibold text-[#161109] shadow-[0_0_42px_rgba(216,181,109,.28)] transition hover:-translate-y-0.5 hover:shadow-[0_0_60px_rgba(216,181,109,.36)]">Explore Website Concepts</a>
-            <a href="#contact" className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 text-center font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">Start a Project</a>
+            <button onClick={() => scrollToSection('portfolio')} className="premium-button min-h-[52px] rounded-full bg-[#d8b56d] px-7 py-4 text-center font-semibold text-[#161109] shadow-[0_0_42px_rgba(216,181,109,.28)] transition hover:-translate-y-0.5 hover:shadow-[0_0_60px_rgba(216,181,109,.36)]">Explore Website Concepts</button>
+            <button onClick={() => scrollToSection('contact')} className="min-h-[52px] rounded-full border border-white/15 px-7 py-4 text-center font-semibold text-[#fff6dd] transition hover:border-[#d8b56d]/60 hover:bg-white/5">Start a Project</button>
           </div>
           <div className="mt-7 flex flex-wrap gap-2.5 sm:gap-3">{badges.map((badge) => <span key={badge} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-xs text-[#e8ddc5] sm:text-sm"><CheckCircle2 size={16} className="shrink-0 text-[#d8b56d]" />{badge}</span>)}</div>
         </motion.div>
