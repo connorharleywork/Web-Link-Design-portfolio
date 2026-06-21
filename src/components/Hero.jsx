@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute left-1/2 top-24 h-64 w-64 -translate-x-1/2 rounded-full bg-[#d8b56d]/10 blur-3xl md:h-96 md:w-96" />
       <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-14">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .75 }}>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[.28em] text-[#d8b56d] sm:text-sm sm:tracking-[.32em]">Web Link Designs</p>
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[.28em] text-[#d8b56d] sm:text-sm sm:tracking-[.32em]">Web Link Desings</p>
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-.04em] text-[#fff6dd] sm:text-5xl md:text-7xl lg:text-[5.25rem]">Premium websites that make businesses look <span className="gold-text">credible, expensive and ready to trust.</span></h1>
           <p className="mt-6 max-w-2xl text-base leading-7 text-[#c9c0ad] sm:text-lg sm:leading-8">Premium, conversion-focused websites for businesses that need to look established, explain their value clearly, and turn visitors into quality enquiries.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">

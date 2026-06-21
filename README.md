@@ -1,6 +1,20 @@
-# Web Link Designs Portfolio
+# Web Link Desings Portfolio
 
-A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Designs**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
+## Pre-marketing polish
+
+This site has been pre-marketing polished for **Web Link Desings** so it is ready to share with business owners through WhatsApp groups, Facebook groups, and direct messages.
+
+Business contact details:
+
+- Email: weblinkdesign3r@gmail.com
+- Phone / WhatsApp: +27 81 828 6752
+- Phone link: tel:+27818286752
+- WhatsApp link: https://wa.me/27818286752?text=Hi%20Web%20Link%20Desings%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.
+
+Important deployment reminder: the `project-enquiry` Netlify Forms flow must be tested after every deploy by submitting a real test enquiry on the live Netlify URL and confirming it appears in the Netlify dashboard and email notifications.
+
+
+A premium React + Vite + Tailwind CSS agency portfolio for **Web Link Desings**. The site is built to help sell websites to businesses by combining luxury visual polish, responsive UX, conversion-focused content, Netlify Forms support, and editable content data.
 
 ## Install dependencies
 
@@ -56,16 +70,16 @@ Update this file to change:
 - Services
 - Packages and package descriptions
 - Process steps
-- Portfolio/demo projects
+- Concept projects
 - Benefits and trust badges
 - FAQs
 - Contact details
 - Navigation labels
-- Azure Tide Guesthouse demo content in the `guesthouseConcept` object
+- Azure Tide Guesthouse concept content in the `guesthouseConcept` object
 
 ### Edit the Azure Tide Guesthouse concept
 
-The first full demo concept lives in:
+The first full concept website lives in:
 
 ```text
 src/pages/GuesthouseConcept.jsx
@@ -77,7 +91,7 @@ Most guesthouse text, room details, amenities, FAQs, policies, reviews and image
 src/data/siteContent.js
 ```
 
-To change the concept later, update the data object first. Use `GuesthouseConcept.jsx` only when changing layout, interactions, lightbox behaviour, room modal behaviour or the enquiry handoff. The concept uses free Unsplash image URLs and should stay demo-safe unless replaced with client-owned or commercial-use imagery.
+To change the concept later, update the data object first. Use `GuesthouseConcept.jsx` only when changing layout, interactions, lightbox behaviour, room modal behaviour or the enquiry handoff. The concept uses free Unsplash image URLs and should stay safe for concept marketing unless replaced with client-owned or commercial-use imagery.
 
 ## Premium UI and conversion features
 
@@ -96,7 +110,7 @@ The polish pass includes:
 
 ## Netlify Forms
 
-The contact form is configured for Netlify Forms without a backend, Firebase, Supabase, or any database:
+The contact form is configured for Netlify Forms and keeps the form name stable for deployment detection:
 
 - A hidden static form is included in `index.html` so Netlify can detect it during deployment.
 - The React contact form in `src/components/Contact.jsx` posts URL-encoded data to Netlify using the same form name: `project-enquiry`.
@@ -125,19 +139,15 @@ After deploying to Netlify:
 
 Tip: if notifications do not arrive, check the recipient spam folder first, then confirm the notification is attached to `project-enquiry` and not another form.
 
-## Analytics placeholder
+## Analytics setup note
 
-An analytics placeholder comment is included in `index.html` inside the `<head>` tag:
-
-```html
-<!-- Analytics placeholder: paste your Google Analytics, Plausible, or other tracking script here. -->
-```
+Add your Google Analytics, Plausible, or other tracking script in `index.html` inside the `<head>` tag when you are ready to measure traffic.
 
 Paste your analytics snippet there when ready. Do not commit private tracking IDs if the repository is public.
 
 ## Suggested next improvements
 
-- Replace placeholder portfolio mockups with optimized screenshots or live case studies.
+- Replace concept preview mockups with optimized screenshots or live case studies when available.
 - Add real client testimonials and measurable results as soon as they are available.
 - Add a discovery-call booking link for visitors who prefer scheduling immediately.
 - Add optimized Open Graph imagery before public launch.
@@ -146,7 +156,7 @@ Paste your analytics snippet there when ready. Do not commit private tracking ID
 
 ### Edit the PrimeBuild Construction concept
 
-The construction company demo concept lives in:
+The construction company concept website lives in:
 
 ```txt
 src/pages/PrimeBuildConcept.jsx
@@ -156,7 +166,7 @@ Most editable PrimeBuild content lives in `src/data/siteContent.js` inside the `
 
 ### Edit the UrbanBite Restaurant concept
 
-The restaurant demo concept lives in:
+The restaurant concept website lives in:
 
 ```txt
 src/pages/UrbanBiteConcept.jsx
@@ -166,36 +176,36 @@ Most editable UrbanBite content lives in `src/data/siteContent.js` inside the `u
 
 ### Edit the GlowHaus Beauty Studio concept
 
-The beauty studio demo concept lives in:
+The beauty studio concept website lives in:
 
 ```txt
 src/pages/GlowHausConcept.jsx
 ```
 
-Most editable GlowHaus content lives in `src/data/siteContent.js` inside the `glowHausConcept` object, including treatment categories, signature services, gallery images, team profiles, opening hours, reviews and FAQs. Update the data object first when changing copy, prices, service names or Unsplash image URLs. Use `GlowHausConcept.jsx` when changing layout, booking-form fields, the before/after slider, service tabs, lightbox behaviour or the client enquiry handoff. The appointment section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Beauty Studio Website Concept`.
+Most editable GlowHaus content lives in `src/data/siteContent.js` inside the `glowHausConcept` object, including treatment categories, signature services, gallery images, team profiles, opening hours, reviews and FAQs. Update the data object first when changing copy, prices, service names or Unsplash image URLs. Use `GlowHausConcept.jsx` when changing layout, booking-form fields, the before/after slider, service tabs, lightbox behaviour or the client enquiry handoff. The appointment section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Beauty Salon Website`.
 
 ### Edit the FitForm Coaching concept
 
-The fitness coach / online coaching demo concept lives in:
+The fitness coach / online coaching concept website lives in:
 
 ```txt
 src/pages/FitFormConcept.jsx
 ```
 
-Most editable FitForm content lives in `src/data/siteContent.js` inside the `fitFormConcept` object, including the goal selector copy, programme cards, FAQs, brand location and Unsplash image URLs. Use `FitFormConcept.jsx` when changing the dashboard visuals, programme-card reveal interaction, transformation toggle, 12-week timeline, pricing cards, coaching enquiry fields or the portfolio-to-contact handoff. The coaching enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Fitness Coach Website Concept`.
+Most editable FitForm content lives in `src/data/siteContent.js` inside the `fitFormConcept` object, including the goal selector copy, programme cards, FAQs, brand location and Unsplash image URLs. Use `FitFormConcept.jsx` when changing the dashboard visuals, programme-card reveal interaction, transformation toggle, 12-week timeline, pricing cards, coaching enquiry fields or the portfolio-to-contact handoff. The coaching enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Fitness Coach Website`.
 
 ### Edit the CapeLegal Advisory concept
 
-The professional services / legal advisory demo concept lives in:
+The professional services / legal advisory concept website lives in:
 
 ```txt
 src/pages/CapeLegalConcept.jsx
 ```
 
-Most editable CapeLegal content lives in `src/data/siteContent.js` inside the `capeLegalConcept` object, including advisory areas, process steps, advisor placeholder profiles, trust cards, resources, office hours, testimonials, FAQs and Unsplash image URLs. Update the data object first when changing service copy, demo credentials, disclaimers, professional-services wording or stock photography. Use `CapeLegalConcept.jsx` when changing the case-file selector, animated document stack, consultation intake form, timeline, accordion behaviour or the portfolio-to-contact handoff. The consultation enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Professional Services Website Concept`.
+Most editable CapeLegal content lives in `src/data/siteContent.js` inside the `capeLegalConcept` object, including advisory areas, process steps, illustrative advisor profiles, trust cards, resources, office hours, testimonials, FAQs and Unsplash image URLs. Update the data object first when changing service copy, demo credentials, disclaimers, professional-services wording or stock photography. Use `CapeLegalConcept.jsx` when changing the case-file selector, animated document stack, consultation intake form, timeline, accordion behaviour or the portfolio-to-contact handoff. The consultation enquiry section reuses the existing Netlify `project-enquiry` form with `websiteType` set to `Professional Services Website`.
 
 ## Concepts and website options
 
-The old standalone **Website Options** homepage section has been merged into the **Website Concepts / Portfolio** section so visitors browse website options, concept demos, details, and enquiries from one focused area.
+The old standalone **Website Concepts** homepage section has been merged into the **Website Concepts / Portfolio** section so visitors browse website options, concept demos, details, and enquiries from one focused area.
 
 Concept card content is editable from the main site content data file at `src/data/siteContent.js`, especially the `portfolioItems` array. Each concept card now supports three actions: **View Concept**, **View Details**, and **Enquire**. The enquiry action preselects the matching website type in the existing Netlify `project-enquiry` form.
