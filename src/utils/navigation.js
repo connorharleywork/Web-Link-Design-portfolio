@@ -1,4 +1,4 @@
-export const MAIN_NAV_IDS = ['home', 'portfolio', 'services', 'packages', 'process', 'contact'];
+export const MAIN_NAV_IDS = ['home', 'concepts', 'about', 'services', 'packages', 'process', 'contact'];
 
 export function getNavOffset() {
   const header = document.querySelector('[data-site-navbar]');

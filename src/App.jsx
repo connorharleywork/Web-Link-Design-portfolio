@@ -57,7 +57,7 @@ export default function App() {
   useEffect(() => {
     if (!activeConcept && returnToConcepts) {
       const frame = window.requestAnimationFrame(() => {
-        scrollToSection('portfolio', { behavior: 'auto' });
+        scrollToSection('concepts', { behavior: 'auto' });
         setReturnToConcepts(false);
       });
       return () => window.cancelAnimationFrame(frame);
@@ -94,8 +94,8 @@ export default function App() {
       <main>
         <Hero />
         <Portfolio onOpenConcept={openConcept} />
-        <Services />
         <About />
+        <Services />
         <Packages />
         <Process />
         <WhyChooseUs />

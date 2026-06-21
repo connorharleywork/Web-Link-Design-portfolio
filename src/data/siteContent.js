@@ -10,7 +10,7 @@ export const brand = {
 };
 
 export const navLinks = [
-  ['Home', 'home'], ['Concepts', 'portfolio'], ['Services', 'services'], ['Packages', 'packages'], ['Process', 'process'], ['Contact', 'contact'],
+  ['Home', 'home'], ['Concepts', 'concepts'], ['About', 'about'], ['Services', 'services'], ['Packages', 'packages'], ['Process', 'process'], ['Contact', 'contact'],
 ];
 
 export const websiteOptions = [
