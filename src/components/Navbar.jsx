@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { brand, navLinks } from '../data/siteContent';
-import { MAIN_NAV_IDS, scrollToSection } from '../utils/navigation';
+import { MAIN_NAV_IDS, getNavOffset, scrollToSection } from '../utils/navigation';
 
 const activeLinkClass = 'bg-[#d8b56d]/10 text-[#fff6dd] shadow-[inset_0_-2px_0_rgba(216,181,109,.75),0_0_24px_rgba(216,181,109,.08)]';
 const inactiveLinkClass = 'text-[#d8d0bf] hover:bg-white/5 hover:text-[#fff6dd]';
@@ -28,21 +28,33 @@ export default function Navbar() {
     const sections = MAIN_NAV_IDS.map((id) => document.getElementById(id)).filter(Boolean);
     if (!sections.length) return undefined;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let frame = null;
 
-        if (visible?.target?.id) {
-          setActiveSection(visible.target.id);
-        }
-      },
-      { root: null, rootMargin: '-28% 0px -58% 0px', threshold: [0.08, 0.18, 0.32, 0.5] },
-    );
+    const updateActiveSection = () => {
+      frame = null;
+      const viewportAnchor = window.scrollY + getNavOffset() + (window.innerHeight - getNavOffset()) * 0.38;
+      const current = sections.reduce((active, section) => {
+        if (section.offsetTop <= viewportAnchor) return section;
+        return active;
+      }, sections[0]);
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      setActiveSection(current.id);
+    };
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 
   const linkClasses = (id, mobile = false) => {

@@ -29,7 +29,7 @@ export default function Portfolio({ onOpenConcept }) {
   };
 
   return (
-    <section id="portfolio" className="px-4 py-20 sm:px-5 md:py-28">
+    <section id="concepts" className="px-4 py-20 sm:px-5 md:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Website Concepts"
