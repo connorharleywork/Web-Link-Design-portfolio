@@ -6,7 +6,8 @@ import Reveal from './Reveal';
 
 const formName = 'project-enquiry';
 const initialErrors = {};
-const initialWebsiteType = 'Not sure yet';
+const initialWebsiteType = '';
+const websiteTypePlaceholder = 'Select website type';
 
 const encodeFormData = (formData) => new URLSearchParams(formData).toString();
 
@@ -49,12 +50,11 @@ export default function Contact() {
     const phonePattern = /^[+()\d\s.-]{7,}$/;
 
     if (!data.name?.trim()) next.name = 'Please enter your name.';
-    if (!data.business?.trim()) next.business = 'Please enter your business name.';
     if (!emailPattern.test(data.email || '')) next.email = 'Please enter a valid email address.';
     if (data.phone?.trim() && !phonePattern.test(data.phone.trim())) {
       next.phone = 'Please enter a valid phone number or leave this blank.';
     }
-    if (!data.websiteType?.trim()) next.websiteType = 'Please choose a website type.';
+    if (!data.websiteType?.trim()) next.websiteType = 'Please select a website type.';
     if (!data.budget?.trim()) next.budget = 'Please add an estimated budget.';
     if (!data.message?.trim() || data.message.trim().length < 12) {
       next.message = 'Please share a short note about your project.';
@@ -83,7 +83,7 @@ export default function Contact() {
         body: encodeFormData(formData),
       });
 
-      if (!response.ok) throw new Error('Netlify form submission failed.');
+      if (!response.ok) throw new Error('Form submission failed.');
 
       setSent(true);
       setErrors(initialErrors);
@@ -154,7 +154,7 @@ export default function Contact() {
 
             <div className="grid gap-5 md:grid-cols-2">
               <Field label="Name" name="name" required error={errors.name} />
-              <Field label="Business name" name="business" required error={errors.business} />
+              <Field label="Business name, optional" name="business" error={errors.business} />
               <Field label="Email" name="email" type="email" required error={errors.email} />
               <Field label="Phone / WhatsApp" name="phone" type="tel" error={errors.phone} />
               <label className="block text-sm font-medium text-[#d8d0bf]">
@@ -167,7 +167,7 @@ export default function Contact() {
                   aria-invalid={Boolean(errors.websiteType)}
                   className="input-luxury mt-2 min-h-[54px]"
                 >
-                  <option>{initialWebsiteType}</option>
+                  <option value="">{websiteTypePlaceholder}</option>
                   {websiteOptions.map((option) => (
                     <option key={option.title}>{option.title}</option>
                   ))}
@@ -206,8 +206,8 @@ export default function Contact() {
               Prefer to start directly? Send a short overview and we’ll help define the right website scope.
             </p>
             <div className="mt-6 space-y-4">
-              <ContactLine icon={Mail} text={contact.email} />
-              <ContactLine icon={MessageCircle} text={contact.whatsapp} />
+              <ContactLine icon={Mail} text={contact.email} href={contact.emailLink} />
+              <ContactLine icon={MessageCircle} text={contact.whatsapp} href={contact.whatsappLink} />
               <ContactLine icon={MapPin} text={contact.location} />
             </div>
             <div className="mt-8 rounded-3xl border border-[#d8b56d]/20 bg-[#d8b56d]/10 p-5 text-sm leading-7 text-[#f7e8bd]">
@@ -237,13 +237,19 @@ function Field({ label, name, type = 'text', placeholder = '', required = false,
   );
 }
 
-function ContactLine({ icon: Icon, text }) {
-  return (
-    <p className="flex items-center gap-3 text-[#c9c0ad]">
+function ContactLine({ icon: Icon, text, href }) {
+  const content = (
+    <>
       <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/5 text-[#d8b56d]">
         <Icon size={18} />
       </span>
       <span>{text}</span>
-    </p>
+    </>
   );
+
+  if (href) {
+    return <a className="flex items-center gap-3 text-[#c9c0ad] transition hover:text-[#fff6dd]" href={href}>{content}</a>;
+  }
+
+  return <p className="flex items-center gap-3 text-[#c9c0ad]">{content}</p>;
 }

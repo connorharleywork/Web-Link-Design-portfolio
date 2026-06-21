@@ -3,7 +3,7 @@
 import { Bot, CalendarCheck, Gauge, Globe2, HeartHandshake, LineChart, MailCheck, PanelsTopLeft, Search, ShieldCheck, Smartphone, Sparkles, Wand2, Wrench } from 'lucide-react';
 
 export const brand = {
-  name: 'Web Link Designs',
+  name: 'Web Link Desings',
   tagline: 'Premium websites that make businesses look trusted and ready to buy from',
   primaryCta: 'Start a Project',
   secondaryCta: 'Explore Website Concepts',
@@ -93,7 +93,7 @@ export const guesthouseConcept = {
     { src: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80', alt: 'Golden sunset over water near the coastline' },
     { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80', alt: 'Scenic coastal landscape with mountains and water' },
   ],
-  locationPoints: ['Blouberg beachfront', 'Table Mountain views', 'Restaurants and cafés nearby', 'Kite surfing and beach walks', 'V&A Waterfront drive placeholder', 'Cape Town CBD drive placeholder', 'Cape Town International Airport drive placeholder'],
+  locationPoints: ['Blouberg beachfront', 'Table Mountain views', 'Restaurants and cafés nearby', 'Kite surfing and beach walks', 'V&A Waterfront drive', 'Cape Town CBD drive', 'Cape Town International Airport drive'],
   experiences: [
     { title: 'Beach walks', icon: 'Waves', text: 'Start the day with Atlantic air, open sand and a slow walk along the Blouberg beachfront.' },
     { title: 'Kitesurfing', icon: 'Wind', text: 'Watch colourful kites from the shore or book a beginner-friendly coastal session nearby.' },
@@ -112,19 +112,19 @@ export const guesthouseConcept = {
     { question: 'Check-out', answer: 'Check-out is by 10:00 so the rooms can be prepared for the next guests.' },
     { question: 'House rules', answer: 'No smoking indoors, quiet hours after 22:00, and ID is required at check-in.' },
     { question: 'Children and pets', answer: 'Children are welcome by arrangement. Pets may be accepted by prior approval only.' },
-    { question: 'Cancellation policy', answer: 'Cancellation terms are a placeholder for this concept and would be replaced with the guesthouse’s real policy.' },
+    { question: 'Cancellation policy', answer: 'Example cancellation terms are shown for layout demonstration and can be customised for the real guesthouse.' },
   ],
   faqs: [
     { question: 'Is breakfast included?', answer: 'Yes, a fresh breakfast is included in this concept package.' },
     { question: 'Is there secure parking?', answer: 'Yes, secure on-site parking is listed as part of the guesthouse amenities.' },
     { question: 'How close is the beach?', answer: 'The concept positions the guesthouse approximately five minutes from the beach.' },
-    { question: 'Do you offer airport transfers?', answer: 'Airport transfers are available on request as a placeholder service.' },
+    { question: 'Do you offer airport transfers?', answer: 'Airport transfers are shown as an example service and can be customised for the real guesthouse.' },
     { question: 'Is there Wi-Fi?', answer: 'Yes, all rooms include free high-speed Wi-Fi.' },
     { question: 'Can I check in late?', answer: 'Late check-in can be arranged by contacting the guesthouse in advance.' },
     { question: 'Are children allowed?', answer: 'Children are welcome by arrangement, depending on room setup and availability.' },
     { question: 'Do rooms have private bathrooms?', answer: 'Yes, each room includes an en-suite bathroom or shower.' },
     { question: 'Can I book directly?', answer: 'Yes, the demo enquiry CTA is designed to support direct booking enquiries.' },
-    { question: 'What is the cancellation policy?', answer: 'The cancellation policy is placeholder content and should be replaced with the real business terms.' },
+    { question: 'What is the cancellation policy?', answer: 'Example cancellation wording is shown for layout demonstration and can be customised for the real business.' },
   ],
 };
 
@@ -132,8 +132,8 @@ export const guesthouseConcept = {
 export const urbanBiteConcept = {
   brandName: 'UrbanBite Restaurant',
   location: '24 Bree Street, Cape Town, South Africa',
-  phone: '+27 XX XXX XXXX',
-  email: 'bookings@urbanbite.co.za',
+  phone: 'Demo contact details shown for concept layout only.',
+  email: 'Demo email shown for concept layout only.',
   quickInfo: ['Open Tue–Sun', 'Dinner & drinks', 'Cape Town', 'Reservations welcome'],
   images: {
     hero: { src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2200&q=82', alt: 'Warm modern restaurant interior with tables and pendant lighting' },
@@ -179,7 +179,7 @@ export const benefits = [
   ['Designed to make your business look credible', ShieldCheck], ['Built for enquiries, not just decoration', HeartHandshake], ['Mobile-first experience', Smartphone], ['Clean structure and fast performance', Gauge], ['Easy to update later', PanelsTopLeft], ['Guidance with domain and hosting', Globe2],
 ];
 
-export const trustBadges = ['Mobile-first build', 'Netlify Forms ready', 'Basic SEO setup', 'Launch guidance included'];
+export const trustBadges = ['Mobile-first build', 'Enquiry form ready', 'Basic SEO setup', 'Launch guidance included'];
 
 export const faqs = [
   ['How long does a website take?', 'Most small websites take 1–3 weeks once content is ready. Larger builds, e-commerce features or custom integrations may need a longer timeline.'],
@@ -195,9 +195,12 @@ export const faqs = [
 ];
 
 export const contact = {
-  email: 'hello@weblinkdesigns.co.za',
-  whatsapp: '+27 XX XXX XXXX',
-  location: 'Cape Town, South Africa',
+  email: 'weblinkdesign3r@gmail.com',
+  emailLink: 'mailto:weblinkdesign3r@gmail.com',
+  whatsapp: '+27 81 828 6752',
+  phoneLink: 'tel:+27818286752',
+  whatsappLink: 'https://wa.me/27818286752?text=Hi%20Web%20Link%20Desings%2C%20I%27d%20like%20to%20enquire%20about%20a%20website.',
+  location: 'South Africa',
 };
 
 export const primeBuildConcept = {
@@ -241,7 +244,7 @@ export const primeBuildConcept = {
     { title: 'Transparent communication', text: 'Regular updates help owners know what has happened, what is next, and what decisions are needed.' },
     { title: 'Clean handover process', text: 'Final snagging, cleaning, and handover notes make the project feel professional to the end.' },
   ],
-  complianceBadges: ['Registered contractor placeholder', 'Public liability insurance placeholder', 'Health & safety compliant placeholder', 'Workmanship guarantee placeholder'],
+  complianceBadges: ['Registered contractor example', 'Public liability insurance example', 'Health & safety compliance example', 'Workmanship guarantee example'],
   process: [
     { title: 'Initial enquiry', text: 'Tell us what you want to build, renovate, repair, or improve and share any important deadlines.' },
     { title: 'Site visit / consultation', text: 'We review the property, access, constraints, practical details, and project goals.' },
@@ -267,7 +270,7 @@ export const primeBuildConcept = {
     ['Do you offer maintenance work?', 'Yes, repairs, maintenance, waterproofing coordination, and property improvements are included.'],
     ['How soon can a project start?', 'Start dates depend on scope, materials, site access, and team availability.'],
     ['What areas do you service?', 'The concept lists Cape Town CBD, Bloubergstrand, Durbanville, Bellville, Somerset West, Paarl, Stellenbosch, Southern Suburbs, Atlantic Seaboard, and Northern Suburbs.'],
-    ['Do you provide workmanship guarantees?', 'A workmanship guarantee is included as a placeholder trust badge for concept purposes.'],
+    ['Do you provide workmanship guarantees?', 'A workmanship guarantee is shown as an example trust signal for layout demonstration.'],
     ['How do payments usually work?', 'Construction payments are usually milestone based, with details confirmed in the accepted quotation and project agreement.'],
   ].map(([question, answer]) => ({ question, answer })),
 };
@@ -380,7 +383,7 @@ export const fitFormConcept = {
     { title: '12-Week Transformation', best: 'Focused goal block', for: 'Clients wanting a focused goal block', includes: ['Training plan', 'Habit coaching', 'Progress reviews', 'Accountability'], duration: '12 weeks', price: 'From R2,800 once-off', image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80' },
     { title: 'Strength & Performance Plan', best: 'Measurable performance', for: 'Lifters and athletes wanting measurable performance', includes: ['Strength programming', 'Testing', 'Mobility', 'Recovery tracking'], duration: '8 to 12 weeks', price: 'From R1,400', image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=900&q=80' },
   ],
-  faqs: ['Do I need gym experience?','Can I do online coaching only?','Do you create meal plans?','How often do we check in?','What if I miss a workout?','Can I train at home?','How long before I see results?','Do you work with beginners?','Do you offer strength-focused plans?','Is nutrition included?','Can I pause coaching?','How do I start?'].map(q => ({ question: q, answer: 'Yes — this demo FAQ would be customised to the coach’s real process. FitForm is positioned around flexible, beginner-friendly, structured coaching with realistic habit support and clear check-ins.' })),
+  faqs: ['Do I need gym experience?','Can I do online coaching only?','Do you create meal plans?','How often do we check in?','What if I miss a workout?','Can I train at home?','How long before I see results?','Do you work with beginners?','Do you offer strength-focused plans?','Is nutrition included?','Can I pause coaching?','How do I start?'].map(q => ({ question: q, answer: 'Yes — this sample FAQ would be customised to the coach’s real process. FitForm is positioned around flexible, beginner-friendly, structured coaching with realistic habit support and clear check-ins.' })),
 };
 
 
@@ -415,11 +418,11 @@ export const capeLegalConcept = {
     { title: 'Written summary and follow-up', text: 'A plain-language summary records practical next steps and follow-up items.' },
   ],
   advisors: [
-    { name: 'Sarah van der Merwe', role: 'Principal Legal Advisor', focus: 'Contracts, property, business advisory', bio: 'Sarah is positioned as the calm lead advisor for complex decisions and document-heavy matters.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in a business portrait placeholder for principal advisor' },
-    { name: 'Daniel Petersen', role: 'Compliance Consultant', focus: 'Company compliance, policies, governance', bio: 'Daniel supports governance structure, policies, compliance checklists, and organised company records.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=82', alt: 'Professional man in a business portrait placeholder for compliance consultant' },
-    { name: 'Aisha Khan', role: 'Client Advisory Coordinator', focus: 'Intake, document preparation, client communication', bio: 'Aisha coordinates intake, documents, communication, and preparation so clients feel informed.', credentials: 'Credentials placeholder · demonstration profile', image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in office portrait placeholder for client advisory coordinator' },
+    { name: 'Sarah van der Merwe', role: 'Principal Legal Advisor', focus: 'Contracts, property, business advisory', bio: 'Sarah is positioned as the calm lead advisor for complex decisions and document-heavy matters.', credentials: 'Example credentials · illustrative profile', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in a business portrait for principal advisor' },
+    { name: 'Daniel Petersen', role: 'Compliance Consultant', focus: 'Company compliance, policies, governance', bio: 'Daniel supports governance structure, policies, compliance checklists, and organised company records.', credentials: 'Example credentials · illustrative profile', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=82', alt: 'Professional man in a business portrait for compliance consultant' },
+    { name: 'Aisha Khan', role: 'Client Advisory Coordinator', focus: 'Intake, document preparation, client communication', bio: 'Aisha coordinates intake, documents, communication, and preparation so clients feel informed.', credentials: 'Example credentials · illustrative profile', image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=900&q=82', alt: 'Professional woman in office portrait for client advisory coordinator' },
   ],
-  trustCards: ['Confidential enquiry handling','Clear written summaries','Plain-language guidance','Structured document review','Professional communication','Practical next steps','Secure document process placeholder','Transparent scope before work begins'],
+  trustCards: ['Confidential enquiry handling','Clear written summaries','Plain-language guidance','Structured document review','Professional communication','Practical next steps','Secure document process example','Transparent scope before work begins'],
   trustSeals: ['Confidential consultations','Secure enquiry process','Professional advisory approach','Clear scope confirmation'],
   resources: [
     { category: 'Contracts', title: 'What to check before signing a service agreement', excerpt: 'Key clauses, obligations, renewal terms, and practical risks to understand before signing.', time: '4 min read' },
@@ -436,14 +439,14 @@ export const capeLegalConcept = {
   faqs: [
     ['Do I need to book a consultation?', 'Yes. A consultation helps clarify the matter, documents, timing, and next step.'],
     ['Can I send documents for review?', 'Yes. This concept intake flow allows clients to indicate whether documents are available.'],
-    ['Is my enquiry confidential?', 'The concept is designed around confidential handling, with a demo-only disclaimer.'],
+    ['Is my enquiry confidential?', 'The concept is designed around confidential handling, with a concept disclaimer.'],
     ['Do you assist businesses and individuals?', 'Yes, the concept positions support for business owners, professionals, families, and individuals.'],
     ['Can you help with contracts?', 'Contract review is one of the main advisory areas presented in this concept.'],
     ['Can you help with property matters?', 'Yes, property leases, sales documentation, notices, and correspondence are included as examples.'],
     ['Do you offer once-off consultations?', 'The concept supports once-off advisory sessions or scoped document reviews.'],
     ['How are fees usually discussed?', 'Fees are discussed after an initial scope review so expectations are clear before work begins.'],
     ['Do you provide written summaries?', 'The process includes a written summary and follow-up step as a trust-building feature.'],
-    ['Does submitting the form create a legal relationship?', 'No. Submitting the demo form does not create a legal advisor/client relationship.'],
+    ['Does submitting the form create a legal relationship?', 'No. Submitting the concept form does not create a legal advisor/client relationship.'],
     ['What should I prepare before a consultation?', 'Prepare the key documents, a short timeline, questions, deadlines, and preferred contact method.'],
     ['Can you assist remotely?', 'Yes. The concept supports remote enquiries and consultations as an option.'],
   ].map(([question, answer]) => ({ question, answer })),
