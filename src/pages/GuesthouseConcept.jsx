@@ -58,10 +58,10 @@ export default function GuesthouseConcept({ onBack }) {
               {guesthouseConcept.trustDetails.map((detail) => <span key={detail} className="rounded-2xl border border-white/10 bg-white/10 p-3 text-sm text-[#f8ead1] backdrop-blur">{detail}</span>)}
             </div>
           </Reveal>
-          <Reveal delay={0.08} className="mobile-form-card rounded-[2rem] border border-white/15 bg-[#fbf4e7]/95 p-5 text-[#071521] shadow-2xl shadow-black/30">
+          <Reveal delay={0.08} className="mobile-form-card w-full max-w-full min-w-0 overflow-hidden rounded-[2rem] border border-white/15 bg-[#fbf4e7]/95 p-5 text-[#071521] shadow-2xl shadow-black/30">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8f6a2f]">Find your stay</p>
-            <div className="mobile-form-stack mt-5 grid gap-3">
-              {bookingFields.map((field) => <label key={field} className="mobile-form-field text-sm font-semibold text-[#243142]">{field}<input type={field.includes('date') ? 'date' : 'number'} min={field === 'Guests' ? '1' : undefined} placeholder="2" className="mt-2 min-h-[52px] w-full max-w-full min-w-0 rounded-2xl border border-[#d8c8aa] bg-white px-4 text-[#071521] outline-none focus:border-[#8f6a2f]" /></label>)}
+            <div className="mobile-form-stack mt-5 grid w-full max-w-full min-w-0 grid-cols-1 gap-3">
+              {bookingFields.map((field) => <label key={field} className="mobile-form-field block w-full max-w-full min-w-0 text-sm font-semibold text-[#243142]">{field}<input type={field.includes('date') ? 'date' : 'number'} min={field === 'Guests' ? '1' : undefined} placeholder="2" className="mt-2 block min-h-[52px] w-full max-w-full min-w-0 rounded-2xl border border-[#d8c8aa] bg-white px-4 text-[#071521] outline-none box-border focus:border-[#8f6a2f]" /></label>)}
             </div>
             <button onClick={() => showConceptInteraction()} className="mt-5 inline-flex min-h-[52px] w-full max-w-full min-w-0 items-center justify-center gap-2 rounded-full bg-[#071521] px-5 font-bold text-white"><Search size={18} /> Search Stay</button>
             <p className="mt-4 text-xs leading-5 text-[#6e6255]">Example booking panel — connects to a direct enquiry flow for portfolio showcase.</p>
