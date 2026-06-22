@@ -141,3 +141,257 @@ img, svg { max-width: 100%; }
 @keyframes capeFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 @media (prefers-reduced-motion: reduce) { .doc-card, .capelegal-heading::after { animation: none; } .capelegal-btn:hover, .capelegal-link:hover, .case-tab:hover, .advisor-card:hover { transform: none; } }
 @media (max-width: 640px) { .doc-card { position: relative; inset: auto; width: 100%; margin-top: 1rem; transform: none !important; } }
+
+/* Mobile launch polish: keep desktop styling intact while tightening real phone layouts. */
+@media (max-width: 640px) {
+  html,
+  body,
+  #root {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    min-width: 0;
+  }
+
+  #root,
+  main,
+  section,
+  header,
+  footer,
+  article,
+  aside,
+  form,
+  label,
+  div {
+    min-width: 0;
+  }
+
+  img,
+  video,
+  canvas,
+  svg,
+  iframe,
+  form,
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a,
+  button,
+  label,
+  input,
+  select,
+  textarea {
+    overflow-wrap: anywhere;
+  }
+
+  section[class*="py-20"],
+  section[class*="md:py-28"] {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  section[class*="pb-24"] {
+    padding-bottom: 6.75rem;
+  }
+
+  .rounded-\[2\.5rem\] {
+    border-radius: 1.55rem;
+  }
+
+  .rounded-\[2rem\],
+  .rounded-3xl {
+    border-radius: 1.35rem;
+  }
+
+  .p-8,
+  .sm\:p-12,
+  .sm\:p-8,
+  .sm\:p-7,
+  .sm\:p-6 {
+    padding: 1.25rem;
+  }
+
+  .p-6,
+  .p-5 {
+    padding: 1rem;
+  }
+
+  .gap-10,
+  .gap-8,
+  .gap-6,
+  .mt-10,
+  .mb-10 {
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  h1,
+  .text-8xl,
+  .lg\:text-8xl {
+    font-size: clamp(2.35rem, 12vw, 3.7rem) !important;
+    line-height: .98 !important;
+    letter-spacing: -.045em !important;
+    white-space: normal !important;
+  }
+
+  h2,
+  .text-6xl,
+  .sm\:text-6xl,
+  .text-5xl,
+  .sm\:text-5xl,
+  .text-4xl {
+    font-size: clamp(1.8rem, 8.5vw, 2.65rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.035em !important;
+  }
+
+  h3,
+  .text-3xl {
+    font-size: clamp(1.35rem, 6vw, 1.9rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .text-lg,
+  .sm\:text-xl,
+  .text-xl {
+    font-size: 1rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .tracking-\[\.28em\],
+  .tracking-\[\.26em\],
+  .tracking-\[0\.28em\],
+  .tracking-\[0\.25em\],
+  .tracking-\[\.25em\] {
+    letter-spacing: .14em !important;
+  }
+
+  button,
+  a[class*="rounded-full"] {
+    min-height: 44px;
+  }
+
+  button[class*="px-7"],
+  a[class*="px-7"],
+  button[class*="px-8"],
+  a[class*="px-8"] {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  button[class*="py-4"],
+  a[class*="py-4"] {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+
+  input,
+  select,
+  textarea,
+  .input-luxury {
+    width: 100%;
+    min-height: 46px !important;
+    padding: .78rem .9rem !important;
+    border-radius: 1rem !important;
+  }
+
+  textarea,
+  textarea.min-h-28,
+  textarea.min-h-36 {
+    min-height: 7rem !important;
+  }
+
+  .min-h-\[92vh\],
+  .lg\:min-h-\[92vh\] {
+    min-height: auto !important;
+  }
+
+  .h-\[34rem\],
+  .h-96,
+  .min-h-96 {
+    height: 20rem !important;
+    min-height: 20rem !important;
+  }
+
+  .h-80,
+  .h-72,
+  .h-64,
+  .h-60 {
+    height: 14rem !important;
+  }
+
+  .grid-cols-\[\.8fr_1fr\],
+  .grid-cols-\[1\.05fr_\.95fr\],
+  .grid-cols-\[\.95fr_1\.05fr\],
+  .grid-cols-\[\.8fr_1\.2fr\],
+  .grid-cols-\[\.75fr_1\.25fr\],
+  .grid-cols-\[1fr_\.82fr\] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .fitform-page main,
+  .glowhaus-page main {
+    padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+  }
+
+  .fitform-page header > div,
+  .glowhaus-page header > div {
+    align-items: stretch;
+  }
+
+  .fitform-page header button,
+  .glowhaus-page header button,
+  .fitform-page header a,
+  .glowhaus-page header a {
+    padding-left: .8rem;
+    padding-right: .8rem;
+    font-size: .78rem;
+  }
+
+  .fitform-page section:first-of-type,
+  .glowhaus-page section:first-of-type,
+  .capelegal-page section:first-of-type {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .fitform-page form,
+  .glowhaus-page form {
+    overflow: hidden;
+  }
+
+  .fitform-page .fixed.bottom-4,
+  .glowhaus-page .fixed.bottom-4 {
+    bottom: calc(.75rem + env(safe-area-inset-bottom));
+    left: .75rem;
+    right: .75rem;
+    padding-top: .78rem;
+    padding-bottom: .78rem;
+  }
+
+  .fitform-page [class*="border-\[12px\]"] {
+    border-width: 8px;
+    outline-width: 6px;
+    padding: 1.65rem;
+  }
+
+  .fitform-page [class*="text-5xl"] {
+    font-size: 2.2rem !important;
+  }
+}
